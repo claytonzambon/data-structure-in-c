@@ -32,7 +32,9 @@ int main()
                 dados_aluno.media = calcular_media(dados_aluno);
                 if(verificar_matricula(li, dados_aluno)){
                     msg_matricula_existente();
-                } else if(insere_lista_final(li, dados_aluno)) {
+                } else if(verificar_notas(dados_aluno)) {
+                    msg_digite_notas_validas();
+                } else if (insere_lista_final(li, dados_aluno)){
                     msg_elemento_inserido_com_sucesso();
                 }
                 break;
@@ -53,6 +55,8 @@ int main()
                 dados_aluno.media = calcular_media(dados_aluno);
                 if(verificar_matricula(li, dados_aluno)){
                     msg_matricula_existente();
+                } else if(verificar_notas(dados_aluno)) {
+                    msg_digite_notas_validas();
                 } else if(insere_lista_inicio(li, dados_aluno)) {
                     msg_elemento_inserido_com_sucesso();
                 }
@@ -74,6 +78,8 @@ int main()
                 dados_aluno.media = calcular_media(dados_aluno);
                 if(verificar_matricula(li, dados_aluno)){
                     msg_matricula_existente();
+                } else if(verificar_notas(dados_aluno)) {
+                    msg_digite_notas_validas();
                 } else if(insere_lista_ordenada(li, dados_aluno)) {
                     msg_elemento_inserido_com_sucesso();
                 }

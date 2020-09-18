@@ -23,6 +23,7 @@ int consulta_lista_mat(Lista* li, int mat, struct aluno *al);
 
 int verificar_matricula(Lista* li, struct aluno al);
 float calcular_media(struct aluno al);
+float verificar_notas(struct aluno al);
 
 
 //mensagens.c
@@ -36,4 +37,5 @@ int msg_matricula_nao_encontrado(int mat);
 int msg_posicao_nao_encontrado(int pos);
 void msg_matricula_existente();
 void msg_elemento_inserido_com_sucesso();
+void msg_digite_notas_validas();
 

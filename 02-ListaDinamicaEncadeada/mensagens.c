@@ -83,3 +83,8 @@ void msg_elemento_inserido_com_sucesso(){
     printf("\n\nElemento inserido com sucesso\n\n");
     system("pause");
 }
+
+void msg_digite_notas_validas(){
+    printf("\n\nDigite Notas entre 0 e 10\n\n");
+    system("pause");
+}
