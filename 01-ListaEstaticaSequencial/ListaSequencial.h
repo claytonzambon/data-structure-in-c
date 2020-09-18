@@ -1,5 +1,5 @@
 //Arquivo ListaSequencial.h
-#define MAX 4  //Tamanho que sera nosso vetor
+#define MAX 10  //Tamanho que sera nosso vetor
 
 /*Definindo um Tipo Aluno
 Elementos da Lista: desta forma sera possivel guardar
@@ -20,11 +20,21 @@ void libera_lista(); //Assinando a funcao libera_lista
 int tamanho_lista(Lista* li); //Assina funcao tamanho_lista
 int lista_cheia(Lista* li);
 int lista_vazia(Lista* li);
+int verificar_matricula(Lista* li, struct aluno al);
 
 //Funcoes para Inserir elementos
 int insere_lista_final(Lista* li, struct  aluno al);
 int insere_lista_inicio(Lista* li, struct aluno al);
 int insere_lista_ordenada(Lista* li, struct aluno al);
+
+//Funcoes para Remover Elementos
+int remover_lista_final(Lista* li);
+int remover_lista_inicio(Lista* li);
+int remover_lista(Lista* li, int mat);
+
+//Funcoes para Consultar Elementos
+int consultar_lista_mat(Lista* li, int mat, struct aluno *al);
+int consultar_lista_pos(Lista* li, int pos, struct aluno *al);
 
 void imprime_lista(Lista* li);
 

@@ -118,4 +118,105 @@ void imprime_lista(Lista* li){
     }
 }
 
+//Funcao para verificar se a matricula ja existe
+int verificar_matricula(Lista* li, struct aluno al){
+    int i;
+    for(i = li->qtd-1; i >= 0; i--){
+        if(li->dados[i].matricula == al.matricula)
+            return 1;
+    }
+    return 0;
+}
+
+//Funcao que remove elemento do final
+int remover_lista_final(Lista* li){
+    if(li == NULL || li->qtd == 0)
+        return 0;
+
+    li->qtd--;
+    return 1;
+}
+
+//Funcao que remove elemento do inicio
+int remover_lista_inicio(Lista* li){
+    if(li == NULL || li->qtd == 0)
+        return 0;
+
+    int k = 0;
+    for(k = 0; k < li->qtd-1; k++)
+        li->dados[k] = li->dados[k+1];
+
+    li->qtd--;
+    return 1;
+}
+
+//Funcao que remove elemento do meio
+int remover_lista(Lista* li, int mat){
+    if(li == NULL || li->qtd == 0)
+        return 0;
+
+    int k, i = 0;
+    while(i < li->qtd && li->dados[i].matricula != mat)
+        i++;
+
+    if(i == li->qtd){ //Elemento nao encontrado
+        printf("\n\nMatricula nao encontrada\n\n");
+        system("pause");
+        return 0;
+    }
+
+    for(k = i; k < li->qtd-1; k++)
+        li->dados[k] = li->dados[k+1];
+
+    li->qtd--;
+    printf("\nRemovida a matricula >> %d << da Lista\n", mat);
+    return 1;
+}
+
+//Funcao para consultar pela matricula
+int consultar_lista_mat(Lista* li, int mat, struct aluno *al){
+    if(li == NULL || li->qtd == 0)
+        return 0;
+
+    int i = 0;
+    while(i < li->qtd && li->dados[i].matricula != mat)
+        i++;
+
+    if(i == li->qtd){ //Elemento nao encontrado
+        printf("\n\nMatricula nao encontrada\n\n");
+        system("pause");
+        return 0;
+    }
+
+    *al = li->dados[i];
+    printf("--------------------------------\n");
+    printf("Matricula: %d\n", li->dados[i].matricula);
+    printf("Nome: %s\n", li->dados[i].nome);
+    printf("Notas: %.2f - %.2f - %.2f - %.2f\n",
+           li->dados[i].n1,
+           li->dados[i].n2,
+           li->dados[i].n3,
+           li->dados[i].n4);
+    printf("--------------------------------\n");
+    return 1;
+}
+
+//Funcao para consultar pela posição
+int consultar_lista_pos(Lista* li, int pos, struct aluno *al){
+    if(li == NULL || pos <= 0 || pos > li->qtd)
+        return 0;
+
+    *al = li->dados[pos-1];
+    printf("--------------------------------\n");
+    printf("Matricula: %d\n", li->dados[pos-1].matricula);
+    printf("Nome: %s\n", li->dados[pos-1].nome);
+    printf("Notas: %.2f - %.2f - %.2f - %.2f\n",
+           li->dados[pos-1].n1,
+           li->dados[pos-1].n2,
+           li->dados[pos-1].n3,
+           li->dados[pos-1].n4);
+    printf("--------------------------------\n");
+    return 1;
+}
+
 

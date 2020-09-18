@@ -7,6 +7,8 @@ int main()
     Lista* li = cria_lista(); //Declarando um ponteiro do tipo Lista
     int opcao;
     int i = 1;
+    int matricula_aluno;
+    int posicao;
     //Declaração de uma Struct para armazenar e inserir elementos do tipo aluno
     struct aluno dados_aluno;
     while(i == 1){
@@ -24,7 +26,8 @@ int main()
                     printf("\n\nDigite a Matricula: ");
                     scanf("%d", &dados_aluno.matricula);
                     printf("Digite o Nome: ");
-                    scanf("%s", dados_aluno.nome);
+                    fseek(stdin,0,SEEK_END);
+                    scanf("%[^\n]", dados_aluno.nome);
                     printf("Digite a Nota 01: ");
                     scanf("%f", &dados_aluno.n1);
                     printf("Digite a Nota 02: ");
@@ -33,12 +36,11 @@ int main()
                     scanf("%f", &dados_aluno.n3);
                     printf("Digite a Nota 04: ");
                     scanf("%f", &dados_aluno.n4);
-                    if(insere_lista_final(li, dados_aluno))
-                    {
-                        printf("\n\n>>>Dados inseridos com sucesso<<<\n\n\n");
+                    if(verificar_matricula(li, dados_aluno)){
+                        printf("\n\nMatricula Existente\n\n");
                         system("pause");
-                    } else {
-                        printf("\n\n>>>ERRO na insercao dos dados<<<\n\n\n");
+                    } else if(insere_lista_final(li, dados_aluno)) {
+                        printf("\n\nElemento inserido com sucesso\n\n");
                         system("pause");
                     }
                     break;
@@ -53,7 +55,8 @@ int main()
                     printf("\n\nDigite a Matricula: ");
                     scanf("%d", &dados_aluno.matricula);
                     printf("Digite o Nome: ");
-                    scanf("%s", dados_aluno.nome);
+                    fseek(stdin,0,SEEK_END);
+                    scanf("%[^\n]", dados_aluno.nome);
                     printf("Digite a Nota 01: ");
                     scanf("%f", &dados_aluno.n1);
                     printf("Digite a Nota 02: ");
@@ -62,12 +65,11 @@ int main()
                     scanf("%f", &dados_aluno.n3);
                     printf("Digite a Nota 04: ");
                     scanf("%f", &dados_aluno.n4);
-                    if(insere_lista_inicio(li, dados_aluno))
-                    {
-                        printf("\n\n>>>Dados inseridos com sucesso<<<\n\n\n");
+                    if(verificar_matricula(li, dados_aluno)){
+                        printf("\n\nMatricula Existente\n\n");
                         system("pause");
-                    } else {
-                        printf("\n\n>>>ERRO na insercao dos dados<<<\n\n\n");
+                    } else if (insere_lista_inicio(li, dados_aluno)) {
+                        printf("\n\nElemento inserido com sucesso\n\n");
                         system("pause");
                     }
                     break;
@@ -82,7 +84,8 @@ int main()
                     printf("\n\nDigite a Matricula: ");
                     scanf("%d", &dados_aluno.matricula);
                     printf("Digite o Nome: ");
-                    scanf("%s", dados_aluno.nome);
+                    fseek(stdin,0,SEEK_END);
+                    scanf("%[^\n]", dados_aluno.nome);
                     printf("Digite a Nota 01: ");
                     scanf("%f", &dados_aluno.n1);
                     printf("Digite a Nota 02: ");
@@ -91,36 +94,77 @@ int main()
                     scanf("%f", &dados_aluno.n3);
                     printf("Digite a Nota 04: ");
                     scanf("%f", &dados_aluno.n4);
-                    if(insere_lista_ordenada(li, dados_aluno))
-                    {
-                        printf("\n\n>>>Dados inseridos com sucesso<<<\n\n\n");
+                    if(verificar_matricula(li, dados_aluno)){
+                        printf("\n\nMatricula Existente\n\n");
                         system("pause");
-                    } else {
-                        printf("\n\n>>>ERRO na insercao dos dados<<<\n\n\n");
+                    } else if(insere_lista_ordenada(li, dados_aluno)) {
+                        printf("\n\nElemento inserido com sucesso\n\n");
                         system("pause");
                     }
                     break;
                 }
             case 4:
-                printf("\n\nOpcao 04\n\n");
-                system("pause");
+                if(lista_vazia(li))
+                {
+                    printf("\n\nLista Vazia\n\n");
+                    system("pause");
+                    break;
+                } else if (remover_lista_final(li)) {
+                    printf("\n\nElemento Removido com Sucesso\n\n");
+                    system("pause");
+                    break;
+                }
                 break;
             case 5:
-                printf("\n\nOpcao 05\n\n");
-                system("pause");
-                break;
+                if(lista_vazia(li))
+                {
+                    printf("\n\nLista Vazia\n\n");
+                    system("pause");
+                    break;
+                } else if (remover_lista_inicio(li)) {
+                    printf("\n\nElemento Removido com Sucesso\n\n");
+                    system("pause");
+                    break;
+                }
             case 6:
-                printf("\n\nOpcao 06\n\n");
-                system("pause");
-                break;
+                if(lista_vazia(li))
+                {
+                    printf("\n\nLista Vazia\n\n");
+                    system("pause");
+                    break;
+                } else {
+                    printf("\nDigite a matricula a ser removida: ");
+                    scanf("%d", &matricula_aluno);
+                    remover_lista(li, matricula_aluno);
+                    system("pause");
+                    break;
+                }
             case 7:
-                printf("\n\nOpcao 07\n\n");
-                system("pause");
-                break;
+                if(lista_vazia(li))
+                {
+                    printf("\n\nLista Vazia\n\n");
+                    system("pause");
+                    break;
+                } else {
+                    printf("\nDigite a posicao a ser buscada: ");
+                    scanf("%d", &posicao);
+                    consultar_lista_pos(li, posicao, &dados_aluno);
+                    system("pause");
+                    break;
+                }
             case 8:
-                printf("\n\nOpcao 08\n\n");
-                system("pause");
-                break;
+                if(lista_vazia(li))
+                {
+                    printf("\n\nLista Vazia\n\n");
+                    system("pause");
+                    break;
+                } else {
+                    printf("\nDigite a matricula a ser buscada: ");
+                    scanf("%d", &matricula_aluno);
+                    consultar_lista_mat(li, matricula_aluno, &dados_aluno);
+                    system("pause");
+                    break;
+                }
             case 9:
                 if(lista_vazia(li))
                 {
