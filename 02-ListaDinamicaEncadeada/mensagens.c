@@ -30,10 +30,12 @@ int exibe_consulta(struct aluno *al){
     printf("-------------------------------\n");
     printf("Matricula: %d\n", al->matricula);
         printf("Nome: %s\n",  al->nome);
-        printf("Notas: %.2f %.2f %.2f\n",
+        printf("Notas: %.2f - %.2f - %.2f - %.2f\n",
                al->n1,
                al->n2,
-               al->n3);
+               al->n3,
+               al->n4);
+        printf("Media: %.2f\n", al->media);
         printf("-------------------------------\n");
 }
 

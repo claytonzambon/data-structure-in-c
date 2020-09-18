@@ -2,7 +2,7 @@
 struct aluno{
     int matricula;
     char nome[30];
-    float n1,n2,n3,n4;
+    float n1,n2,n3,n4,media;
 };
 typedef struct elemento* Lista;
 
@@ -22,6 +22,7 @@ int consulta_lista_pos(Lista* li, int pos, struct aluno *al);
 int consulta_lista_mat(Lista* li, int mat, struct aluno *al);
 
 int verificar_matricula(Lista* li, struct aluno al);
+float calcular_media(struct aluno al);
 
 
 //mensagens.c

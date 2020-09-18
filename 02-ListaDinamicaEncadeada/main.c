@@ -29,6 +29,7 @@ int main()
                 scanf("%f", &dados_aluno.n3);
                 printf("Digite a Nota 04: ");
                 scanf("%f", &dados_aluno.n4);
+                dados_aluno.media = calcular_media(dados_aluno);
                 if(verificar_matricula(li, dados_aluno)){
                     msg_matricula_existente();
                 } else if(insere_lista_final(li, dados_aluno)) {
@@ -49,6 +50,7 @@ int main()
                 scanf("%f", &dados_aluno.n3);
                 printf("Digite a Nota 04: ");
                 scanf("%f", &dados_aluno.n4);
+                dados_aluno.media = calcular_media(dados_aluno);
                 if(verificar_matricula(li, dados_aluno)){
                     msg_matricula_existente();
                 } else if(insere_lista_inicio(li, dados_aluno)) {
@@ -69,6 +71,7 @@ int main()
                 scanf("%f", &dados_aluno.n3);
                 printf("Digite a Nota 04: ");
                 scanf("%f", &dados_aluno.n4);
+                dados_aluno.media = calcular_media(dados_aluno);
                 if(verificar_matricula(li, dados_aluno)){
                     msg_matricula_existente();
                 } else if(insere_lista_ordenada(li, dados_aluno)) {

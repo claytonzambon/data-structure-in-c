@@ -52,6 +52,13 @@ int lista_vazia(Lista* li){
     return 0;
 }
 
+//Funcao que calcula a media das notas dos alunos
+float calcular_media(struct aluno al){
+    float media_notas;
+    media_notas = (al.n1 + al.n2 + al.n3 + al.n4)/4;
+    return media_notas;
+}
+
 //Implementação da Função insere_lista_inicio
 int insere_lista_inicio(Lista* li, struct aluno al){
     if(li == NULL)
