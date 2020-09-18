@@ -256,7 +256,7 @@ int verificar_matricula(Lista* li, struct aluno al){
 }
 
 //Funcao que verifica se as notas digitadas
-// sao menores que ZERO ou maiores que DEZ
+//Sao menores que ZERO ou maiores que DEZ
 float verificar_notas(struct aluno al){
     if(al.n1 < 0 || al.n1 > 10){
         return 1;
