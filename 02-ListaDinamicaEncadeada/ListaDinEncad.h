@@ -21,6 +21,8 @@ int remove_lista(Lista* li, int mat);
 int consulta_lista_pos(Lista* li, int pos, struct aluno *al);
 int consulta_lista_mat(Lista* li, int mat, struct aluno *al);
 
+int verificar_matricula(Lista* li, struct aluno al);
+
 
 //mensagens.c
 void menu();
@@ -31,4 +33,6 @@ void msg_removida_do_final();
 int msg_removida_a_matricula(int mat);
 int msg_matricula_nao_encontrado(int mat);
 int msg_posicao_nao_encontrado(int pos);
+void msg_matricula_existente();
+void msg_elemento_inserido_com_sucesso();
 

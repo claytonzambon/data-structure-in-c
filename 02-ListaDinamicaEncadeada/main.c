@@ -29,7 +29,11 @@ int main()
                 scanf("%f", &dados_aluno.n3);
                 printf("Digite a Nota 04: ");
                 scanf("%f", &dados_aluno.n4);
-                insere_lista_final(li, dados_aluno);
+                if(verificar_matricula(li, dados_aluno)){
+                    msg_matricula_existente();
+                } else if(insere_lista_final(li, dados_aluno)) {
+                    msg_elemento_inserido_com_sucesso();
+                }
                 break;
             case 2:
                 printf("Digite a Matricula: ");
@@ -45,7 +49,11 @@ int main()
                 scanf("%f", &dados_aluno.n3);
                 printf("Digite a Nota 04: ");
                 scanf("%f", &dados_aluno.n4);
-                insere_lista_inicio(li, dados_aluno);
+                if(verificar_matricula(li, dados_aluno)){
+                    msg_matricula_existente();
+                } else if(insere_lista_inicio(li, dados_aluno)) {
+                    msg_elemento_inserido_com_sucesso();
+                }
                 break;
             case 3:
                 printf("Digite a Matricula: ");
@@ -61,7 +69,11 @@ int main()
                 scanf("%f", &dados_aluno.n3);
                 printf("Digite a Nota 04: ");
                 scanf("%f", &dados_aluno.n4);
-                insere_lista_ordenada(li, dados_aluno);
+                if(verificar_matricula(li, dados_aluno)){
+                    msg_matricula_existente();
+                } else if(insere_lista_ordenada(li, dados_aluno)) {
+                    msg_elemento_inserido_com_sucesso();
+                }
                 break;
             case 4:
 				if(lista_vazia(li))

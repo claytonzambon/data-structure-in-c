@@ -231,3 +231,19 @@ int consulta_lista_mat(Lista* li, int mat, struct aluno *al){
         return 1;
     }
 }
+
+//Verificar se Matricula ja existe
+int verificar_matricula(Lista* li, struct aluno al){
+    Elem *no = *li;
+    int i = 1;
+    while(no != NULL){
+        if(no->dados.matricula  == al.matricula)
+        {
+            return 1;
+        } else {
+            no = no->prox;
+            i++;
+        }
+    }
+    return 0;
+}

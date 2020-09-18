@@ -71,3 +71,13 @@ int msg_posicao_nao_encontrado(int pos){
     printf("\n\nPosicao >> %d << nao encontrada\n\n", pos);
     system("pause");
 }
+
+void msg_matricula_existente(){
+    printf("\n\nMatricula Existente\n\n");
+    system("pause");
+}
+
+void msg_elemento_inserido_com_sucesso(){
+    printf("\n\nElemento inserido com sucesso\n\n");
+    system("pause");
+}
