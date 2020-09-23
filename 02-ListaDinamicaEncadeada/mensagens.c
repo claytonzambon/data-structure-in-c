@@ -6,7 +6,7 @@
 void menu(){
     printf("ACADEMICO: CLAYTON ZAMBON\n\n");
     printf("\n#########################################");
-    printf("\n#   MENU - Lista Estatica Sequencial    #");
+    printf("\n#   MENU - Lista Dinamica Encadeada     #");
     printf("\n#                                       #");
     printf("\n# Digite a opcao desejada               #");
     printf("\n#                                       #");
