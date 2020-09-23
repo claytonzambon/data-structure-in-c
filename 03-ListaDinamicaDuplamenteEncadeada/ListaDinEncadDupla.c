@@ -17,3 +17,17 @@ Lista* cria_lista(){
         *li = NULL;
     return li;
 }
+
+//Implementação da funcao libera_lista
+void libera_lista(Lista* li){
+    if(li != NULL){
+        Elem* no;
+        while((*li) != NULL){
+            no = *li;
+            *li = (*li)->prox;
+            free(no);
+        }
+        free(li);
+    }
+}
+
