@@ -51,9 +51,15 @@ int main()
                 system("pause");
                 break;
             case 10:
-                printf("\nOpcao 10\n");
-                system("pause");
-                break;
+				if(lista_vazia(li))
+                {
+                    msg_lista_vazia();
+                    break;
+                } else {
+                    printf("O tamanho da Lista eh: %d\n", tamanho_lista(li));
+                    system("pause");
+                    break;
+                }
             case 11:
                 printf("\n\n\t\tAte Logo !!!\n\n\n\n\n");
                 i = 0;

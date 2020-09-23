@@ -26,3 +26,8 @@ void menu(){
     printf("\n");
     printf("\nEscolha uma opcao para continuar >>: ");
 }
+
+void msg_lista_vazia(){
+    printf("\n\nLista Vazia\n\n");
+    system("pause");
+}

@@ -31,3 +31,26 @@ void libera_lista(Lista* li){
     }
 }
 
+//Implementação da funcao tamanho_lista
+int tamanho_lista(Lista* li){
+    if(li == NULL)
+        return 0;
+    int cont = 0;
+    Elem* no = *li;
+    while(no != NULL){
+        cont++;
+        no = no->prox;
+    }
+    return cont;
+}
+
+//Implementação da funcao lista_vazia
+int lista_vazia(Lista* li){
+    if(li == NULL)
+        return 1;
+
+    if(*li == NULL)
+        return 1;
+
+    return 0;
+}
