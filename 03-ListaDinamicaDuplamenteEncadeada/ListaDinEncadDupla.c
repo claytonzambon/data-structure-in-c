@@ -54,3 +54,23 @@ int lista_vazia(Lista* li){
 
     return 0;
 }
+
+//Implementação da funcao insere_lista_inicio
+int insere_lista_inicio(Lista* li, struct aluno al){
+    if(li == NULL)
+        return 0;
+
+    Elem* no;
+    no = (Elem*) malloc(sizeof(Elem));
+    if(no == NULL)
+        return 0;
+
+    no->dados = al;
+    no->prox = (*li);
+    no->ant = NULL;
+    if(*li != NULL)//lista não vazia: apontar para o anterior!
+        (*li)->ant = no;
+
+    *li = no;
+    return 1;
+}

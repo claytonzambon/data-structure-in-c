@@ -31,3 +31,13 @@ void msg_lista_vazia(){
     printf("\n\nLista Vazia\n\n");
     system("pause");
 }
+
+void msg_elemento_inserido_com_sucesso(){
+    printf("\n\nElemento inserido com sucesso\n\n");
+    system("pause");
+}
+
+void msg_falha_insercao(){
+    printf("\n\nFalha ao inserir o elemento\n\n");
+    system("pause");
+}
