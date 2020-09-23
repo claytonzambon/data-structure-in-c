@@ -31,6 +31,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="ListaDinEncadDupla.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="ListaDinEncadDupla.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
