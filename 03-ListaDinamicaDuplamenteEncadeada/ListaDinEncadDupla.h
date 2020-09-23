@@ -7,5 +7,8 @@ struct aluno{
 
 typedef struct elemento* Lista;
 
-//Arquivo mensagens.c
+//Funcoes do arquivo ListaDinEncadDupla.c
+Lista* cria_lista();
+
+//Funcoes do arquivo mensagens.c
 void menu();

@@ -5,6 +5,7 @@
 int main()
 {
     Lista* li; //Declarando um ponteiro do tipo Lista
+    li = cria_lista();
     struct aluno dados_aluno;
     int opcao;
     int i = 1;
