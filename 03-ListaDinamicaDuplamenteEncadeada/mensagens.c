@@ -26,3 +26,5 @@ void menu(){
     printf("\n");
     printf("\nEscolha uma opcao para continuar >>: ");
 }
+
+printf("Exemplo");
