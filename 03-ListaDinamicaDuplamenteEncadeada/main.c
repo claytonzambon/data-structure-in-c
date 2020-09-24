@@ -95,9 +95,15 @@ int main()
                 system("pause");
                 break;
             case 9:
-                printf("\nOpcao 09\n");
-                system("pause");
-                break;
+				if(lista_vazia(li))
+                {
+                    msg_lista_vazia();
+                    break;
+                } else {
+                    imprime_lista(li);
+                    system("pause");
+                    break;
+                }
             case 10:
 				if(lista_vazia(li))
                 {

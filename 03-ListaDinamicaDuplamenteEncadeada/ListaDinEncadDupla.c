@@ -138,3 +138,24 @@ int insere_lista_ordenada(Lista* li, struct aluno al){
         return 1;
     }
 }
+
+//Implementação da funcao imprime_lista
+void imprime_lista(Lista* li){
+    if(li == NULL)
+        return;
+
+    Elem* no = *li;
+    while(no != NULL){
+        //exibe_consulta(no); //mensagens.c
+        printf("Matricula: %d\n",no->dados.matricula);
+        printf("Nome: %s\n",no->dados.nome);
+        printf("Notas: %.2f - %.2f - %.2f - %.2f\n",
+               no->dados.n1,
+               no->dados.n2,
+               no->dados.n3,
+               no->dados.n4);
+        printf("-------------------------------\n");
+
+        no = no->prox;
+    }
+}
