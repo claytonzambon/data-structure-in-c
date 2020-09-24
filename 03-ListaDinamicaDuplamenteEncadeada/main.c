@@ -79,9 +79,17 @@ int main()
                 system("pause");
                 break;
             case 5:
-                printf("\nOpcao 05\n");
-                system("pause");
-                break;
+				if(lista_vazia(li))
+                {
+                    msg_lista_vazia();
+                    break;
+                } else if(remove_lista_inicio(li)){
+                    msg_removida_do_inicio();
+                    break;
+                } else {
+                    msg_falha_na_remocao();
+                    break;
+                }
             case 6:
                 printf("\nOpcao 06\n");
                 system("pause");

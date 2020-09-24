@@ -159,3 +159,19 @@ void imprime_lista(Lista* li){
         no = no->prox;
     }
 }
+
+//Implementação da funcao remove_lista_inicio
+int remove_lista_inicio(Lista* li){
+    if(li == NULL)
+        return 0;
+    if((*li) == NULL)//lista vazia
+        return 0;
+
+    Elem *no = *li;
+    *li = no->prox;
+    if(no->prox != NULL)
+        no->prox->ant = NULL;
+
+    free(no);
+    return 1;
+}

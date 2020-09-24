@@ -41,3 +41,13 @@ void msg_falha_insercao(){
     printf("\n\nFalha ao inserir o elemento\n\n");
     system("pause");
 }
+
+void msg_removida_do_inicio(){
+    printf("\nElemento removido do INICIO da lista\n\n");
+    system("pause");
+}
+
+void msg_falha_na_remocao(){
+    printf("\n\nErro ao Remover elemento\n\n");
+    system("pause");
+}
