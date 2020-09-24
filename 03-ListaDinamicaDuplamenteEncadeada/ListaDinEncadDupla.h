@@ -13,6 +13,7 @@ void libera_lista(Lista* li);
 int tamanho_lista(Lista* li);
 int lista_vazia(Lista* li);
 int insere_lista_inicio(Lista* li, struct aluno al);
+int insere_lista_final(Lista* li, struct aluno al);
 
 //Funcoes do arquivo mensagens.c
 void menu();

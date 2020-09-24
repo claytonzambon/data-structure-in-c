@@ -74,3 +74,30 @@ int insere_lista_inicio(Lista* li, struct aluno al){
     *li = no;
     return 1;
 }
+
+//Implementação da funcao insere_lista_final
+int insere_lista_final(Lista* li, struct aluno al){
+    if(li == NULL)
+        return 0;
+
+    Elem *no;
+    no = (Elem*) malloc(sizeof(Elem));
+    if(no == NULL)
+        return 0;
+
+    no->dados = al;
+    no->prox = NULL;
+    if((*li) == NULL){//lista vazia: insere início
+        no->ant = NULL;
+        *li = no;
+    }else{
+        Elem *aux;
+        aux = *li;
+        while(aux->prox != NULL){
+            aux = aux->prox;
+        }
+        aux->prox = no;
+        no->ant = aux;
+    }
+    return 1;
+}
