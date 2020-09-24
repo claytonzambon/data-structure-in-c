@@ -55,8 +55,24 @@ int main()
                 }
                 break;
             case 3:
-                printf("\nOpcao 03\n");
-                system("pause");
+                printf("Digite a Matricula: ");
+                scanf("%d", &dados_aluno.matricula);
+                printf("Digite o nome: ");
+                fseek(stdin,0,SEEK_END);
+                scanf("%[^\n]", dados_aluno.nome);
+                printf("Digite a Nota 01: ");
+                scanf("%f", &dados_aluno.n1);
+                printf("Digite a Nota 02: ");
+                scanf("%f", &dados_aluno.n2);
+                printf("Digite a Nota 03: ");
+                scanf("%f", &dados_aluno.n3);
+                printf("Digite a Nota 04: ");
+                scanf("%f", &dados_aluno.n4);
+                if(insere_lista_ordenada(li, dados_aluno)) {
+                    msg_elemento_inserido_com_sucesso();
+                } else {
+                    msg_falha_insercao();
+                }
                 break;
             case 4:
                 printf("\nOpcao 04\n");
