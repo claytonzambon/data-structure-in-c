@@ -56,3 +56,13 @@ void msg_falha_na_remocao(){
     printf("\n\nErro ao Remover elemento\n\n");
     system("pause");
 }
+
+int msg_matricula_nao_encontrado(int mat){
+    printf("\nElemento da matricula >> %d << nao encontrado\n\n", mat);
+    system("pause");
+}
+
+int msg_removida_a_matricula(int mat){
+    printf("\nRemovida a matricula >> %d << da lista\n", mat);
+        system("pause");
+}

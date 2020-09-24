@@ -18,6 +18,7 @@ int insere_lista_ordenada(Lista* li, struct aluno al);
 void imprime_lista(Lista* li);
 int remove_lista_inicio(Lista* li);
 int remove_lista_final(Lista* li);
+int remove_lista(Lista* li, int mat);
 
 //Funcoes do arquivo mensagens.c
 void menu();
@@ -27,3 +28,5 @@ void msg_falha_insercao();
 void msg_removida_do_inicio();
 void msg_falha_na_remocao();
 void msg_removida_do_final();
+int msg_matricula_nao_encontrado(int mat);
+int msg_removida_a_matricula(int mat);

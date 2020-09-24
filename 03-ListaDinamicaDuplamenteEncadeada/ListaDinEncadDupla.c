@@ -195,3 +195,34 @@ int remove_lista_final(Lista* li){
     free(no);
     return 1;
 }
+
+//Implementação da funcao remove_lista
+int remove_lista(Lista* li, int mat){
+    if(li == NULL)
+        return 0;
+
+    if((*li) == NULL)//lista vazia
+        return 0;
+
+    Elem *no = *li;
+    while(no != NULL && no->dados.matricula != mat){
+        no = no->prox;
+    }
+
+    if(no == NULL){//não encontrado
+        msg_matricula_nao_encontrado(mat); //mensagens.c
+        return 0;
+    }
+
+    if(no->ant == NULL)//remover o primeiro?
+        *li = no->prox;
+    else
+        no->ant->prox = no->prox;
+
+    if(no->prox != NULL)//não é o último?
+        no->prox->ant = no->ant;
+
+    free(no);
+    msg_removida_a_matricula(mat); //mensagens.c
+    return 1;
+}
