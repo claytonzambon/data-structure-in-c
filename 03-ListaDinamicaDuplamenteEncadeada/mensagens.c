@@ -47,6 +47,11 @@ void msg_removida_do_inicio(){
     system("pause");
 }
 
+void msg_removida_do_final(){
+    printf("\n\nElemento removido do FINAL da lista\n\n");
+    system("pause");
+}
+
 void msg_falha_na_remocao(){
     printf("\n\nErro ao Remover elemento\n\n");
     system("pause");

@@ -175,3 +175,23 @@ int remove_lista_inicio(Lista* li){
     free(no);
     return 1;
 }
+
+//Implementação da funcao remove_lista_final
+int remove_lista_final(Lista* li){
+    if(li == NULL)
+        return 0;
+    if((*li) == NULL)//lista vazia
+        return 0;
+
+    Elem *no = *li;
+    while(no->prox != NULL)
+        no = no->prox;
+
+    if(no->ant == NULL)//remover o primeiro e único
+        *li = no->prox;
+    else
+        no->ant->prox = NULL;
+
+    free(no);
+    return 1;
+}

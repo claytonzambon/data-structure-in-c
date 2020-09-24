@@ -17,6 +17,7 @@ int insere_lista_final(Lista* li, struct aluno al);
 int insere_lista_ordenada(Lista* li, struct aluno al);
 void imprime_lista(Lista* li);
 int remove_lista_inicio(Lista* li);
+int remove_lista_final(Lista* li);
 
 //Funcoes do arquivo mensagens.c
 void menu();
@@ -25,3 +26,4 @@ void msg_elemento_inserido_com_sucesso();
 void msg_falha_insercao();
 void msg_removida_do_inicio();
 void msg_falha_na_remocao();
+void msg_removida_do_final();
