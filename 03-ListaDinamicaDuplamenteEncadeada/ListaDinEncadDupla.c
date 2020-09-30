@@ -226,3 +226,22 @@ int remove_lista(Lista* li, int mat){
     msg_removida_a_matricula(mat); //mensagens.c
     return 1;
 }
+
+//Implementação da funcao consulta_lista_pos
+int consulta_lista_pos(Lista* li, int pos, struct aluno *al){
+    if(li == NULL || pos <= 0)
+        return 0;
+
+    Elem *no = *li;
+    int i = 1;
+    while(no != NULL && i < pos){
+        no = no->prox;
+        i++;
+    }
+    if(no == NULL) {
+        return 0;
+    }else{
+        *al = no->dados;
+        return 1;
+    }
+}

@@ -64,5 +64,20 @@ int msg_matricula_nao_encontrado(int mat){
 
 int msg_removida_a_matricula(int mat){
     printf("\nRemovida a matricula >> %d << da lista\n", mat);
-        system("pause");
+    system("pause");
+}
+
+void posicao_nao_encontrado(int pos){
+    printf("\nPosicao >> %d << nao encontrada\n\n", pos);
+}
+
+void exibe_consulta(struct aluno *al){
+    printf("Matricula: %d\n", al->matricula);
+    printf("Nome: %s\n", al->nome);
+    printf("Notas: %.2f %.2f %.2f\n",
+           al->n1,
+           al->n2,
+           al->n3,
+           al->n4);
+    printf("-------------------------------\n");
 }
