@@ -20,6 +20,7 @@ int remove_lista_inicio(Lista* li);
 int remove_lista_final(Lista* li);
 int remove_lista(Lista* li, int mat);
 int consulta_lista_pos(Lista* li, int pos, struct aluno *al);
+int consulta_lista_mat(Lista* li, int mat, struct aluno *al);
 
 //Funcoes do arquivo mensagens.c
 void menu();
@@ -33,3 +34,4 @@ int msg_matricula_nao_encontrado(int mat);
 int msg_removida_a_matricula(int mat);
 void posicao_nao_encontrado(int pos);
 void exibe_consulta(struct aluno *al);
+void matricula_nao_encontrado(int mat);

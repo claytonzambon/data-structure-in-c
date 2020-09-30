@@ -245,3 +245,19 @@ int consulta_lista_pos(Lista* li, int pos, struct aluno *al){
         return 1;
     }
 }
+
+//Implementação da funcao consulta_lista_mat
+int consulta_lista_mat(Lista* li, int mat, struct aluno *al){
+    if(li == NULL)
+        return 0;
+    Elem *no = *li;
+    while(no != NULL && no->dados.matricula != mat){
+        no = no->prox;
+    }
+    if(no == NULL) {
+        return 0;
+    }else{
+        *al = no->dados;
+        return 1;
+    }
+}

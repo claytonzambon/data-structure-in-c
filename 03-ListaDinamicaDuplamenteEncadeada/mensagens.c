@@ -71,6 +71,10 @@ void posicao_nao_encontrado(int pos){
     printf("\nPosicao >> %d << nao encontrada\n\n", pos);
 }
 
+void matricula_nao_encontrado(int mat){
+    printf("\nElemento da matricula >> %d << nao encontrado\n", mat);
+}
+
 void exibe_consulta(struct aluno *al){
     printf("Matricula: %d\n", al->matricula);
     printf("Nome: %s\n", al->nome);

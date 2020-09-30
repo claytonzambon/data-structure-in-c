@@ -122,8 +122,15 @@ int main()
                 }
                 break;
             case 8:
-                printf("\nOpcao 08\n");
-                system("pause");
+                printf("\nDigite a Matricula a ser buscada: ");
+                scanf("%d", &matricula_aluno);
+                if(consulta_lista_mat(li, matricula_aluno, &dados_aluno)){
+                    exibe_consulta(&dados_aluno); //mensagens.c
+                    system("pause");
+                } else {
+                    matricula_nao_encontrado(matricula_aluno); //mensagens.c
+                    system("pause");
+                }
                 break;
             case 9:
 				if(lista_vazia(li))
