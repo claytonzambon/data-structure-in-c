@@ -75,6 +75,16 @@ void matricula_nao_encontrado(int mat){
     printf("\nElemento da matricula >> %d << nao encontrado\n", mat);
 }
 
+void msg_matricula_existente(){
+    printf("\n\nMatricula Existente\n\n");
+    system("pause");
+}
+
+void msg_digite_notas_validas(){
+    printf("\n\nDigite Notas entre 0 e 10\n\n");
+    system("pause");
+}
+
 void exibe_consulta(struct aluno *al){
     printf("Matricula: %d\n", al->matricula);
     printf("Nome: %s\n", al->nome);

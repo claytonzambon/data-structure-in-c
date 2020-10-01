@@ -3,7 +3,7 @@
 struct aluno{
     int matricula;
     char nome[30];
-    float n1,n2,n3,n4;
+    float n1,n2,n3,n4, media;
 };
 
 typedef struct elemento* Lista;
@@ -12,6 +12,11 @@ typedef struct elemento* Lista;
 Lista* cria_lista();
 void libera_lista(Lista* li);
 int tamanho_lista(Lista* li);
+float verificar_notas(struct aluno al);
+int verificar_matricula(Lista* li, struct aluno al);
+int insere_lista_inicio(Lista* li, struct aluno al);
+float calcular_media(struct aluno al);
+
 
 //Funcoes do Arquivo mensagens.c
 void menu();
@@ -26,3 +31,5 @@ int msg_removida_a_matricula(int mat);
 void posicao_nao_encontrado(int pos);
 void matricula_nao_encontrado(int mat);
 void exibe_consulta(struct aluno *al);
+void msg_matricula_existente();
+void msg_digite_notas_validas();

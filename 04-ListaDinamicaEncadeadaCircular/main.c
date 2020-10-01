@@ -18,8 +18,27 @@ int main()
                 system("pause");
                 break;
             case 2:
-                printf("\nOpcao 02\n");
-                system("pause");
+                printf("Digite a Matricula: ");
+                scanf("%d", &dados_aluno.matricula);
+                printf("Digite o nome: ");
+                fseek(stdin,0,SEEK_END);
+                scanf("%[^\n]", dados_aluno.nome);
+                printf("Digite a Nota 01: ");
+                scanf("%f", &dados_aluno.n1);
+                printf("Digite a Nota 02: ");
+                scanf("%f", &dados_aluno.n2);
+                printf("Digite a Nota 03: ");
+                scanf("%f", &dados_aluno.n3);
+                printf("Digite a Nota 04: ");
+                scanf("%f", &dados_aluno.n4);
+                dados_aluno.media = calcular_media(dados_aluno);
+                if(verificar_matricula(li, dados_aluno)){
+                    msg_matricula_existente();
+                } else if(verificar_notas(dados_aluno)) {
+                    msg_digite_notas_validas();
+                } else if(insere_lista_inicio(li, dados_aluno)) {
+                    msg_elemento_inserido_com_sucesso();
+                }
                 break;
             case 3:
                 printf("\nOpcao 03\n");

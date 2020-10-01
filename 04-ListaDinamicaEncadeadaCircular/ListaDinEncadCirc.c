@@ -29,6 +29,13 @@ void libera_lista(Lista* li){
     }
 }
 
+int lista_vazia(Lista* li){
+    if(li == NULL || (*li) == NULL)
+        return 1;
+
+    return 0;
+}
+
 int tamanho_lista(Lista* li){
     int cont = 0;
     Elem* no = *li;
@@ -39,9 +46,65 @@ int tamanho_lista(Lista* li){
     return cont;
 }
 
-int lista_vazia(Lista* li){
-    if(li == NULL || (*li) == NULL)
+//Funcao que verifica se as notas digitadas
+//Sao menores que ZERO ou maiores que DEZ
+float verificar_notas(struct aluno al){
+    if(al.n1 < 0 || al.n1 > 10){
         return 1;
-
+    } else if (al.n2 < 0 || al.n2 > 10){
+        return 1;
+    } else if (al.n3 < 0 || al.n3 > 10){
+        return 1;
+    } else if (al.n4 < 0 || al.n4 > 10){
+        return 1;
+    }
     return 0;
+}
+
+//Verificar se Matricula ja existe
+int verificar_matricula(Lista* li, struct aluno al){
+    Elem *no = *li;
+    int i = 1;
+    while(no != NULL){
+        if(no->dados.matricula  == al.matricula)
+        {
+            return 1;
+        } else {
+            no = no->prox;
+            i++;
+        }
+    }
+    return 0;
+}
+
+int insere_lista_inicio(Lista* li, struct aluno al){
+    if(li == NULL)
+        return 0;
+
+    Elem *no = (Elem*) malloc(sizeof(Elem));
+    if(no == NULL)
+        return 0;
+
+    no->dados = al;
+    if((*li) == NULL){//lista vazia: insere início
+        *li = no;
+        no->prox = no;
+    }else{
+        Elem *aux = *li;
+        while(aux->prox != (*li)){
+            aux = aux->prox;
+        }
+        aux->prox = no;
+        no->prox = *li;
+        *li = no;
+    }
+    //msg_insercao_com_sucesso(); //mensagens.c
+    return 1;
+}
+
+//Funcao que calcula a media das notas dos alunos
+float calcular_media(struct aluno al){
+    float media_notas;
+    media_notas = (al.n1 + al.n2 + al.n3 + al.n4)/4;
+    return media_notas;
 }
