@@ -263,4 +263,21 @@ int consulta_lista_pos(Lista* li, int pos, struct aluno *al){
     }
 }
 
+int consulta_lista_mat(Lista* li, int mat, struct aluno *al){
+    if(li == NULL || (*li) == NULL)
+        return 0;
+    Elem *no = *li;
+    while(no->prox != (*li) && no->dados.matricula != mat)
+        no = no->prox;
+    if(no->dados.matricula != mat) {
+        msg_matricula_nao_encontrado(mat); //mensagens.c
+        return 0;
+    }
+    else{
+        *al = no->dados;
+        //exibe_consulta(al); //mensagens.c
+        return 1;
+    }
+}
+
 
