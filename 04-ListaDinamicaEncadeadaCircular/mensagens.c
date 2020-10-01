@@ -57,22 +57,18 @@ void msg_falha_na_remocao(){
     system("pause");
 }
 
-int msg_matricula_nao_encontrado(int mat){
+void msg_matricula_nao_encontrado(int mat){
     printf("\nElemento da matricula >> %d << nao encontrado\n\n", mat);
     system("pause");
 }
 
-int msg_removida_a_matricula(int mat){
+void msg_removida_a_matricula(int mat){
     printf("\nRemovida a matricula >> %d << da lista\n", mat);
     system("pause");
 }
 
-void posicao_nao_encontrado(int pos){
+void msg_posicao_nao_encontrado(int pos){
     printf("\nPosicao >> %d << nao encontrada\n\n", pos);
-}
-
-void matricula_nao_encontrado(int mat){
-    printf("\nElemento da matricula >> %d << nao encontrado\n", mat);
 }
 
 void msg_matricula_existente(){

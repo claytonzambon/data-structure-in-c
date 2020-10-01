@@ -244,5 +244,23 @@ int remove_lista(Lista* li, int mat){
     return 1;
 }
 
+int consulta_lista_pos(Lista* li, int pos, struct aluno *al){
+    if(li == NULL || (*li) == NULL || pos <= 0)
+        return 0;
+    Elem *no = *li;
+    int i = 1;
+    while(no->prox != (*li) && i < pos){
+        no = no->prox;
+        i++;
+    }
+    if(i != pos){
+        return 0;
+    }
+    else{
+        *al = no->dados;
+        //exibe_consulta(al); //mensagens.c
+        return 1;
+    }
+}
 
 

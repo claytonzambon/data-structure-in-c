@@ -7,7 +7,7 @@ int main()
     Lista* li = cria_lista(); //Declarando um ponteiro do tipo Lista
     struct aluno dados_aluno;
     int opcao;
-    int matricula_aluno;
+    int matricula_aluno, posicao;
     int i = 1;
     while(i == 1){
         system("cls");
@@ -93,9 +93,22 @@ int main()
                     break;
                 }
             case 7:
-                printf("\nOpcao 07\n");
-                system("pause");
-                break;
+				if(lista_vazia(li))
+                {
+                    msg_lista_vazia();
+                    break;
+                }
+                printf("\nDigite a posicao a ser buscada: ");
+                scanf("%d", &posicao);
+                if (consulta_lista_pos(li, posicao, &dados_aluno)){
+                    exibe_consulta(&dados_aluno); //mensagens.c
+                    system("pause");
+                    break;
+                } else {
+                    msg_posicao_nao_encontrado(posicao);
+                    system("pause");
+                    break;
+                }
             case 8:
                 printf("\nOpcao 08\n");
                 system("pause");
