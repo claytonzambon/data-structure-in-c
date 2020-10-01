@@ -135,3 +135,13 @@ void imprime_lista(Lista* li, struct aluno *al){
     }while(no != NULL);
 }
 
+int remove_lista_inicio(Lista* li){
+    Elem *no = li->inicio;
+    li->inicio = no->prox;
+    free(no);
+    if(li->inicio == NULL)
+        li->final = NULL;
+    li->qtd--;
+    return 1;
+}
+

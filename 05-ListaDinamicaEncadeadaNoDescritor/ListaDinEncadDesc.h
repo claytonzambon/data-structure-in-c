@@ -17,6 +17,7 @@ float calcular_media(struct aluno al);
 int insere_lista_inicio(Lista* li, struct aluno al);
 int insere_lista_final(Lista* li, struct aluno al);
 void imprime_lista(Lista* li, struct aluno *al);
+int remove_lista_inicio(Lista* li);
 
 //Arquivo mensagens.c
 void menu();
@@ -27,7 +28,6 @@ void msg_removida_do_inicio();
 void msg_removida_do_final();
 void msg_falha_na_remocao();
 void msg_matricula_nao_encontrado(int mat);
-void msg_removida_a_matricula(int mat);
 void msg_posicao_nao_encontrado(int pos);
 void msg_matricula_existente();
 void msg_digite_notas_validas();

@@ -60,11 +60,6 @@ void msg_matricula_nao_encontrado(int mat){
     system("pause");
 }
 
-void msg_removida_a_matricula(int mat){
-    printf("\nRemovida a matricula >> %d << da lista\n", mat);
-    system("pause");
-}
-
 void msg_posicao_nao_encontrado(int pos){
     printf("\nPosicao >> %d << nao encontrada\n\n", pos);
 }
