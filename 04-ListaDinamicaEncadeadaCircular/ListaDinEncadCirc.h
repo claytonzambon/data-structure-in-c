@@ -3,7 +3,7 @@
 struct aluno{
     int matricula;
     char nome[30];
-    float n1,n2,n3,n4, media;
+    float n1,n2,n3,n4,media;
 };
 
 typedef struct elemento* Lista;
@@ -14,8 +14,9 @@ void libera_lista(Lista* li);
 int tamanho_lista(Lista* li);
 float verificar_notas(struct aluno al);
 int verificar_matricula(Lista* li, struct aluno al);
-int insere_lista_inicio(Lista* li, struct aluno al);
 float calcular_media(struct aluno al);
+int insere_lista_inicio(Lista* li, struct aluno al);
+int insere_lista_final(Lista* li, struct aluno al);
 
 
 //Funcoes do Arquivo mensagens.c
