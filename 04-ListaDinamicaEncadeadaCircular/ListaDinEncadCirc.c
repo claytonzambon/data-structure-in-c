@@ -53,6 +53,42 @@ float calcular_media(struct aluno al){
     return media_notas;
 }
 
+//Verificar se Matricula ja existe
+int verificar_matricula(Lista* li, struct aluno al){
+    Elem *no = *li;
+    int i = 1;
+    //Necessaria a verificacao abaixo para
+    // a primeira insercao de um elemento
+    if (no == NULL)
+        return 0;
+
+    while(no->prox != (*li)){
+        if(no->dados.matricula  == al.matricula)
+        {
+            return 1;
+        } else {
+            no = no->prox;
+            i++;
+        }
+    }
+    return 0;
+}
+
+//Funcao que verifica se as notas digitadas
+//Sao menores que ZERO ou maiores que DEZ
+float verificar_notas(struct aluno al){
+    if(al.n1 < 0 || al.n1 > 10){
+        return 1;
+    } else if (al.n2 < 0 || al.n2 > 10){
+        return 1;
+    } else if (al.n3 < 0 || al.n3 > 10){
+        return 1;
+    } else if (al.n4 < 0 || al.n4 > 10){
+        return 1;
+    }
+    return 0;
+}
+
 int insere_lista_inicio(Lista* li, struct aluno al){
     if(li == NULL)
         return 0;
@@ -143,38 +179,23 @@ void imprime_lista(Lista* li, struct aluno *al){
     }while(no != (*li));
 }
 
-//Verificar se Matricula ja existe
-int verificar_matricula(Lista* li, struct aluno al){
+int remove_lista_inicio(Lista* li){
+    if((*li) == (*li)->prox){//lista fica vazia
+        free(*li);
+        *li = NULL;
+        return 1;
+    }
+    Elem *atual = *li;
+    while(atual->prox != (*li))//procura o último
+        atual = atual->prox;
+
     Elem *no = *li;
-    int i = 1;
-    if (no == NULL) //Verifica para primeira insercao
-        return 0;
-
-    while(no->prox != (*li)){
-        if(no->dados.matricula  == al.matricula)
-        {
-            return 1;
-        } else {
-            no = no->prox;
-            i++;
-        }
-    }
-    return 0;
+    atual->prox = no->prox;
+    *li = no->prox;
+    free(no);
+    return 1;
 }
 
-//Funcao que verifica se as notas digitadas
-//Sao menores que ZERO ou maiores que DEZ
-float verificar_notas(struct aluno al){
-    if(al.n1 < 0 || al.n1 > 10){
-        return 1;
-    } else if (al.n2 < 0 || al.n2 > 10){
-        return 1;
-    } else if (al.n3 < 0 || al.n3 > 10){
-        return 1;
-    } else if (al.n4 < 0 || al.n4 > 10){
-        return 1;
-    }
-    return 0;
-}
+
 
 
