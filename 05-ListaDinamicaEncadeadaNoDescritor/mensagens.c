@@ -92,7 +92,8 @@ void exibe_consulta(struct aluno *al){
     printf("-------------------------------\n");
 }
 
-void informar_dados(struct aluno *al){  //Captura os dados digitados pelo usuario
+//Funcao para capturar os dados digitados pelo usuario
+void informar_dados(struct aluno *al){
     printf("Digite a Matricula: ");
     scanf("%d", &al->matricula);
     printf("Digite o nome: ");

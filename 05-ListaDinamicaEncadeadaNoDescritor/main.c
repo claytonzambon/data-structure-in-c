@@ -18,8 +18,17 @@ int main()
                 system("pause");
                 break;
             case 2:
-                printf("\nOpcao 02\n");
-                system("pause");
+                informar_dados(&dados_aluno);  //mensagens.c
+                dados_aluno.media = calcular_media(dados_aluno);
+                if(verificar_matricula(li, dados_aluno)){
+                    msg_matricula_existente();
+                } else if(verificar_notas(dados_aluno)) {
+                    msg_digite_notas_validas();
+                } else if(insere_lista_inicio(li, dados_aluno)) {
+                    msg_elemento_inserido_com_sucesso();
+                } else {
+                    msg_falha_insercao();
+                }
                 break;
             case 3:
                 printf("\nOpcao 03\n");
@@ -55,7 +64,7 @@ int main()
                     msg_lista_vazia(); //mensagens.c
                     break;
                 } else {
-                    printf("O tamanho da Lista eh: %d\n", tamanho_lista(li));
+                    printf("O tamanho da Lista eh: %d\n\n", tamanho_lista(li));
                     system("pause");
                     break;
                 }
