@@ -196,6 +196,22 @@ int remove_lista_inicio(Lista* li){
     return 1;
 }
 
+int remove_lista_final(Lista* li){
+    if((*li) == (*li)->prox){//lista fica vaza
+        free(*li);
+        *li = NULL;
+        return 1;
+    }
+    Elem *ant, *no = *li;
+    while(no->prox != (*li)){//procura o último
+        ant = no;
+        no = no->prox;
+    }
+    ant->prox = no->prox;
+    free(no);
+    return 1;
+}
+
 
 
 
