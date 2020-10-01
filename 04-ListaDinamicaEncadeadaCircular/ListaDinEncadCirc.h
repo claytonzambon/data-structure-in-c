@@ -21,6 +21,7 @@ int insere_lista_ordenada(Lista* li, struct aluno al);
 void imprime_lista(Lista* li, struct aluno *al);
 int remove_lista_inicio(Lista* li);
 int remove_lista_final(Lista* li);
+int remove_lista(Lista* li, int mat);
 
 
 //Funcoes do Arquivo mensagens.c

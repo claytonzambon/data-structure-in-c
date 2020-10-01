@@ -7,6 +7,7 @@ int main()
     Lista* li = cria_lista(); //Declarando um ponteiro do tipo Lista
     struct aluno dados_aluno;
     int opcao;
+    int matricula_aluno;
     int i = 1;
     while(i == 1){
         system("cls");
@@ -77,9 +78,20 @@ int main()
                     break;
                 }
             case 6:
-                printf("\nOpcao 06\n");
-                system("pause");
-                break;
+				if(lista_vazia(li))
+                {
+                    msg_lista_vazia();
+                    break;
+                }
+                printf("\nDigite a matricula a ser removida: ");
+                scanf("%d", &matricula_aluno);
+                if (remove_lista(li, matricula_aluno)) {
+                    msg_removida_a_matricula(matricula_aluno);
+                    break;
+                } else {
+                    msg_matricula_nao_encontrado(matricula_aluno);
+                    break;
+                }
             case 7:
                 printf("\nOpcao 07\n");
                 system("pause");
