@@ -57,7 +57,6 @@ void msg_falha_na_remocao(){
 
 void msg_matricula_nao_encontrado(int mat){
     printf("\nElemento da matricula >> %d << nao encontrado\n\n", mat);
-    system("pause");
 }
 
 void msg_posicao_nao_encontrado(int pos){
