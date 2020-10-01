@@ -14,21 +14,6 @@ int main()
         scanf("%d", &opcao);
         switch(opcao){
             case 1:
-                /*
-                printf("Digite a Matricula: ");
-                scanf("%d", &dados_aluno.matricula);
-                printf("Digite o nome: ");
-                fseek(stdin,0,SEEK_END);
-                scanf("%[^\n]", dados_aluno.nome);
-                printf("Digite a Nota 01: ");
-                scanf("%f", &dados_aluno.n1);
-                printf("Digite a Nota 02: ");
-                scanf("%f", &dados_aluno.n2);
-                printf("Digite a Nota 03: ");
-                scanf("%f", &dados_aluno.n3);
-                printf("Digite a Nota 04: ");
-                scanf("%f", &dados_aluno.n4);
-                */
                 informar_dados(&dados_aluno);  //mensagens.c
                 dados_aluno.media = calcular_media(dados_aluno);
                 if(verificar_matricula(li, dados_aluno)){
@@ -42,21 +27,6 @@ int main()
                 }
                 break;
             case 2:
-                /*
-                printf("Digite a Matricula: ");
-                scanf("%d", &dados_aluno.matricula);
-                printf("Digite o nome: ");
-                fseek(stdin,0,SEEK_END);
-                scanf("%[^\n]", dados_aluno.nome);
-                printf("Digite a Nota 01: ");
-                scanf("%f", &dados_aluno.n1);
-                printf("Digite a Nota 02: ");
-                scanf("%f", &dados_aluno.n2);
-                printf("Digite a Nota 03: ");
-                scanf("%f", &dados_aluno.n3);
-                printf("Digite a Nota 04: ");
-                scanf("%f", &dados_aluno.n4);
-                */
                 informar_dados(&dados_aluno);  //mensagens.c
                 dados_aluno.media = calcular_media(dados_aluno);
                 if(verificar_matricula(li, dados_aluno)){
@@ -70,21 +40,6 @@ int main()
                 }
                 break;
             case 3:
-                /*
-                printf("Digite a Matricula: ");
-                scanf("%d", &dados_aluno.matricula);
-                printf("Digite o nome: ");
-                fseek(stdin,0,SEEK_END);
-                scanf("%[^\n]", dados_aluno.nome);
-                printf("Digite a Nota 01: ");
-                scanf("%f", &dados_aluno.n1);
-                printf("Digite a Nota 02: ");
-                scanf("%f", &dados_aluno.n2);
-                printf("Digite a Nota 03: ");
-                scanf("%f", &dados_aluno.n3);
-                printf("Digite a Nota 04: ");
-                scanf("%f", &dados_aluno.n4);
-                */
                 informar_dados(&dados_aluno);  // mensagens.c
                 dados_aluno.media = calcular_media(dados_aluno);
                 if(verificar_matricula(li, dados_aluno)){
@@ -134,6 +89,7 @@ int main()
                     break;
                 } else {
                     printf("O tamanho da Lista eh: %d\n", tamanho_lista(li));
+                    system("pause");
                     break;
                 }
             case 11:

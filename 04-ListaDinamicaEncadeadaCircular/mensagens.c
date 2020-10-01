@@ -88,7 +88,7 @@ void msg_digite_notas_validas(){
 void exibe_consulta(struct aluno *al){
     printf("Matricula: %d\n", al->matricula);
     printf("Nome: %s\n", al->nome);
-    printf("Notas: %.2f %.2f %.2f\n",
+    printf("Notas: %.2f - %.2f  - %.2f - %.2f\n",
            al->n1,
            al->n2,
            al->n3,
@@ -96,7 +96,7 @@ void exibe_consulta(struct aluno *al){
     printf("-------------------------------\n");
 }
 
-void informar_dados(struct aluno *al){
+void informar_dados(struct aluno *al){  //Captura os dados digitados pelo usuario
     printf("Digite a Matricula: ");
     scanf("%d", &al->matricula);
     printf("Digite o nome: ");
