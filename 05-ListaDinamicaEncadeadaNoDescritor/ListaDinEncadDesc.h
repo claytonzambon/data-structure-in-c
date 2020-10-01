@@ -7,6 +7,7 @@ struct aluno{
 typedef struct descritor Lista;
 
 //Arquivo ListaDinEncadDesc.c
+Lista* cria_lista();
 
 //Arquivo mensagens.c
 void menu();

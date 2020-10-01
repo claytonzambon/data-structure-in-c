@@ -14,3 +14,13 @@ struct descritor{
     struct elemento *final;
     int qtd;
 };
+
+Lista* cria_lista(){
+    Lista* li = (Lista*) malloc(sizeof(Lista));
+    if(li != NULL){
+        li->inicio = NULL;
+        li->final = NULL;
+        li->qtd = 0;
+    }
+    return li;
+}
