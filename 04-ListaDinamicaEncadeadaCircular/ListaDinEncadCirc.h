@@ -18,6 +18,7 @@ float calcular_media(struct aluno al);
 int insere_lista_inicio(Lista* li, struct aluno al);
 int insere_lista_final(Lista* li, struct aluno al);
 int insere_lista_ordenada(Lista* li, struct aluno al);
+void imprime_lista(Lista* li, struct aluno *al);
 
 
 //Funcoes do Arquivo mensagens.c

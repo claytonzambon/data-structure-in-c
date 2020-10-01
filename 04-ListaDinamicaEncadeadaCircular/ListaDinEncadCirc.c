@@ -166,4 +166,20 @@ int insere_lista_ordenada(Lista* li, struct aluno al){
     }
 }
 
+void imprime_lista(Lista* li, struct aluno *al){
+    Elem* no = *li;
+    do{
+        exibe_consulta(al);
+        /*
+        printf("Matricula: %d\n",no->dados.matricula);
+        printf("Nome: %s\n",no->dados.nome);
+        printf("Notas: %f %f %f\n",no->dados.n1,
+                                   no->dados.n2,
+                                   no->dados.n3);
+        printf("-------------------------------\n");
+        */
+        no = no->prox;
+    }while(no != (*li));
+}
+
 
