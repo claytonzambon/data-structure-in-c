@@ -145,3 +145,21 @@ int remove_lista_inicio(Lista* li){
     return 1;
 }
 
+int remove_lista_final(Lista* li){
+    Elem *ant, *no = li->inicio;
+    while(no->prox != NULL){
+        ant = no;
+        no = no->prox;
+    }
+    if(no == li->inicio){//remover o primeiro?
+        li->inicio = NULL;
+        li->final = NULL;
+    }else{
+        ant->prox = no->prox;
+        li->final = ant;
+    }
+    free(no);
+    li->qtd--;
+    return 1;
+}
+

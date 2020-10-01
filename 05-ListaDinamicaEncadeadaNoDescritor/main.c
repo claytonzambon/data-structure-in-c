@@ -40,9 +40,17 @@ int main()
                 }
                 break;
             case 3:
-                printf("\nOpcao 03\n");
-                system("pause");
-                break;
+				if(lista_vazia(li))
+                {
+                    msg_lista_vazia();
+                    break;
+                } else if (remove_lista_final(li)) {
+                    msg_removida_do_final();
+                    break;
+                } else {
+                    msg_falha_na_remocao();
+                    break;
+                }
             case 4:
 				if(lista_vazia(li))
                 {
