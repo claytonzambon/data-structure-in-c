@@ -163,3 +163,19 @@ int remove_lista_final(Lista* li){
     return 1;
 }
 
+int consulta_lista_pos(Lista* li, int pos, struct aluno *al){
+    Elem *no = li->inicio;//primeiro elemento
+    int i = 1;
+    while(no != NULL && i < pos){
+        no = no->prox;
+        i++;
+    }
+    if(no == NULL){
+        return 0;
+    }else{
+        *al = no->dados;
+        //exibe_consulta(al);
+        return 1;
+    }
+}
+

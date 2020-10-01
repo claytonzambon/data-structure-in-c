@@ -19,6 +19,7 @@ int insere_lista_final(Lista* li, struct aluno al);
 void imprime_lista(Lista* li, struct aluno *al);
 int remove_lista_inicio(Lista* li);
 int remove_lista_final(Lista* li);
+int consulta_lista_pos(Lista* li, int pos, struct aluno *al);
 
 //Arquivo mensagens.c
 void menu();
