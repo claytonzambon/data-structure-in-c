@@ -24,3 +24,15 @@ Lista* cria_lista(){
     }
     return li;
 }
+
+void libera_lista(Lista* li){
+    if(li != NULL){
+        Elem* no;
+        while((li->inicio) != NULL){
+            no = li->inicio;
+            li->inicio = li->inicio->prox;
+            free(no);
+        }
+        free(li);
+    }
+}
