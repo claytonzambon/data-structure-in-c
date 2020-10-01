@@ -16,6 +16,7 @@ float verificar_notas(struct aluno al);
 float calcular_media(struct aluno al);
 int insere_lista_inicio(Lista* li, struct aluno al);
 int insere_lista_final(Lista* li, struct aluno al);
+void imprime_lista(Lista* li, struct aluno *al);
 
 //Arquivo mensagens.c
 void menu();

@@ -126,3 +126,12 @@ int insere_lista_final(Lista* li, struct aluno al){
     li->qtd++;
     return 1;
 }
+
+void imprime_lista(Lista* li, struct aluno *al){
+    Elem* no = li->inicio;
+    do{
+        exibe_consulta(no); // mensagens.c
+        no = no->prox;
+    }while(no != NULL);
+}
+

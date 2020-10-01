@@ -56,18 +56,16 @@ int main()
                 system("pause");
                 break;
             case 7:
-                printf("\nOpcao 07\n");
-                system("pause");
-                break;
+				if(lista_vazia(li))
+                {
+                    msg_lista_vazia();
+                    break;
+                } else {
+                    imprime_lista(li, &dados_aluno);
+                    system("pause");
+                    break;
+                }
             case 8:
-                printf("\nOpcao 08\n");
-                system("pause");
-                break;
-            case 9:
-                printf("\nOpcao 09\n");
-                system("pause");
-                break;
-            case 10:
 				if(lista_vazia(li))
                 {
                     msg_lista_vazia(); //mensagens.c
@@ -77,9 +75,17 @@ int main()
                     system("pause");
                     break;
                 }
-            case 11:
+            case 9:
                 printf("\n\n\t\tAte Logo !!!\n\n\n\n\n");
                 i = 0;
+                break;
+            case 10:
+                printf("\nOpcao 09\n");
+                system("pause");
+                break;
+            case 11:
+                printf("\nOpcao 11\n");
+                system("pause");
                 break;
             default:
                 printf("\n\nOpcao Invalida\n\n");

@@ -13,15 +13,13 @@ void menu(){
     printf("\n#                                       #");
     printf("\n# 1  - Inserir Elemento no Final        #");
     printf("\n# 2  - Inserir Elemento no Inicio       #");
-    printf("\n# 3  - Inserir Elemento no Ordenado     #");
-    printf("\n# 4  - Remover Elemento do Final        #");
-    printf("\n# 5  - Remover Elemento do Inicio       #");
-    printf("\n# 6  - Remover Elemento                 #");
-    printf("\n# 7  - Consultar Elemento pela Posicao  #");
-    printf("\n# 8  - Consultar Elemento pela Matricula#");
-    printf("\n# 9  - Exibir Lista                     #");
-    printf("\n# 10 - Exibir o Tamanho da Lista        #");
-    printf("\n# 11 - Sair                             #");
+    printf("\n# 3  - Remover Elemento do Final        #");
+    printf("\n# 4  - Remover Elemento do Inicio       #");
+    printf("\n# 5  - Consultar Elemento pela Posicao  #");
+    printf("\n# 6  - Consultar Elemento pela Matricula#");
+    printf("\n# 7  - Exibir Lista                     #");
+    printf("\n# 8  - Exibir o Tamanho da Lista        #");
+    printf("\n# 9  - Sair                             #");
     printf("\n#########################################");
     printf("\n");
     printf("\nEscolha uma opcao para continuar >>: ");
@@ -88,8 +86,8 @@ void exibe_consulta(struct aluno *al){
            al->n1,
            al->n2,
            al->n3,
-           al->n4,
-           al->media);
+           al->n4);
+    printf("Media: %.2f\n", al->media);
     printf("-------------------------------\n");
 }
 
