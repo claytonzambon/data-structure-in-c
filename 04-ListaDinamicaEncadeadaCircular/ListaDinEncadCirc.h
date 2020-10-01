@@ -10,6 +10,7 @@ typedef struct elemento* Lista;
 
 //Funcoes do Arquivo ListaDinEncadCirc.c
 Lista* cria_lista();
+void libera_lista(Lista* li);
 
 //Funcoes do Arquivo mensagens.c
 void menu();

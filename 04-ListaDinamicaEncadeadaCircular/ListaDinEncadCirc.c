@@ -15,3 +15,16 @@ Lista* cria_lista(){
         *li = NULL;
     return li;
 }
+
+void libera_lista(Lista* li){
+    if(li != NULL && (*li) != NULL){
+        Elem *aux, *no = *li;
+        while((*li) != no->prox){
+            aux = no;
+            no = no->prox;
+            free(aux);
+        }
+        free(no);
+        free(li);
+    }
+}

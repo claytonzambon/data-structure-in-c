@@ -63,7 +63,7 @@ int main()
                 break;
         }
     }
-    //libera_lista(li);
+    libera_lista(li);
     system("pause");
     printf("\n\n\n\n");
 }
