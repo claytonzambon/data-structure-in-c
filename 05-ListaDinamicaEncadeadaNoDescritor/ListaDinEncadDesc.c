@@ -36,3 +36,16 @@ void libera_lista(Lista* li){
         free(li);
     }
 }
+
+int lista_vazia(Lista* li){
+    if(li == NULL || li->inicio == NULL)
+        return 1;
+
+    return 0;
+}
+
+int tamanho_lista(Lista* li){
+    return li->qtd;
+}
+
+

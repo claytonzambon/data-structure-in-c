@@ -9,6 +9,8 @@ typedef struct descritor Lista;
 //Arquivo ListaDinEncadDesc.c
 Lista* cria_lista();
 void libera_lista(Lista* li);
+int lista_vazia(Lista* li);
+int tamanho_lista(Lista* li);
 
 //Arquivo mensagens.c
 void menu();
