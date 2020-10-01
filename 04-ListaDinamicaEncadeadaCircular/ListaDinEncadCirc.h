@@ -8,5 +8,8 @@ struct aluno{
 
 typedef struct elemento* Lista;
 
-//Arquivo mensagens.c
+//Funcoes do Arquivo ListaDinEncadCirc.c
+Lista* cria_lista();
+
+//Funcoes do Arquivo mensagens.c
 void menu();

@@ -8,3 +8,10 @@ struct elemento{
     struct elemento *prox;
 };
 typedef struct elemento Elem;
+
+Lista* cria_lista(){
+    Lista* li = (Lista*) malloc(sizeof(Lista));
+    if(li != NULL)
+        *li = NULL;
+    return li;
+}
