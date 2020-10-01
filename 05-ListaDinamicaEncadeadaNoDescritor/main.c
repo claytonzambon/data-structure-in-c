@@ -14,8 +14,17 @@ int main()
         scanf("%d", &opcao);
         switch(opcao){
             case 1:
-                printf("\nOpcao 01\n");
-                system("pause");
+                informar_dados(&dados_aluno);  //mensagens.c
+                dados_aluno.media = calcular_media(dados_aluno);
+                if(verificar_matricula(li, dados_aluno)){
+                    msg_matricula_existente();
+                } else if(verificar_notas(dados_aluno)) {
+                    msg_digite_notas_validas();
+                } else if(insere_lista_final(li, dados_aluno)) {
+                    msg_elemento_inserido_com_sucesso();
+                } else {
+                    msg_falha_insercao();
+                }
                 break;
             case 2:
                 informar_dados(&dados_aluno);  //mensagens.c

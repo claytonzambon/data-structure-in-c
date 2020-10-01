@@ -88,7 +88,8 @@ void exibe_consulta(struct aluno *al){
            al->n1,
            al->n2,
            al->n3,
-           al->n4);
+           al->n4,
+           al->media);
     printf("-------------------------------\n");
 }
 
