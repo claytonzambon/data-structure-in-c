@@ -131,4 +131,39 @@ int insere_lista_final(Lista* li, struct aluno al){
     return 1;
 }
 
+int insere_lista_ordenada(Lista* li, struct aluno al){
+    if(li == NULL) {
+        return 0;
+    }
+    Elem *no = (Elem*) malloc(sizeof(Elem));
+    if(no == NULL) {
+        return 0;
+    }
+    no->dados = al;
+    if((*li) == NULL){//insere início
+        *li = no;
+        no->prox = no;
+        return 1;
+    }
+    else{
+        if((*li)->dados.matricula > al.matricula){//insere início
+            Elem *atual = *li;
+            while(atual->prox != (*li))//procura o último
+                atual = atual->prox;
+            no->prox = *li;
+            atual->prox = no;
+            *li = no;
+            return 1;
+        }
+        Elem *ant = *li, *atual = (*li)->prox;
+        while(atual != (*li) && atual->dados.matricula < al.matricula){
+            ant = atual;
+            atual = atual->prox;
+        }
+        ant->prox = no;
+        no->prox = atual;
+        return 1;
+    }
+}
+
 

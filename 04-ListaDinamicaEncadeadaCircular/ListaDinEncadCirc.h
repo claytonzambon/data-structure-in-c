@@ -17,6 +17,7 @@ int verificar_matricula(Lista* li, struct aluno al);
 float calcular_media(struct aluno al);
 int insere_lista_inicio(Lista* li, struct aluno al);
 int insere_lista_final(Lista* li, struct aluno al);
+int insere_lista_ordenada(Lista* li, struct aluno al);
 
 
 //Funcoes do Arquivo mensagens.c
@@ -34,3 +35,5 @@ void matricula_nao_encontrado(int mat);
 void exibe_consulta(struct aluno *al);
 void msg_matricula_existente();
 void msg_digite_notas_validas();
+
+void informar_dados(struct aluno *al);

@@ -95,3 +95,19 @@ void exibe_consulta(struct aluno *al){
            al->n4);
     printf("-------------------------------\n");
 }
+
+void informar_dados(struct aluno *al){
+    printf("Digite a Matricula: ");
+    scanf("%d", &al->matricula);
+    printf("Digite o nome: ");
+    fseek(stdin,0,SEEK_END);
+    scanf("%[^\n]", al->nome);
+    printf("Digite a Nota 01: ");
+    scanf("%f", &al->n1);
+    printf("Digite a Nota 02: ");
+    scanf("%f", &al->n2);
+    printf("Digite a Nota 03: ");
+    scanf("%f", &al->n3);
+    printf("Digite a Nota 04: ");
+    scanf("%f", &al->n4);
+}
