@@ -47,3 +47,10 @@ int Pilha_vazia(Pilha* pi){
     else
         return (pi->qtd == 0);
 }
+
+//Funcao que insere elemento na Pilha
+int insere_Pilha(Pilha* pi, struct aluno al){
+    pi->dados[pi->qtd] = al;
+    pi->qtd++;
+    return 1;
+}

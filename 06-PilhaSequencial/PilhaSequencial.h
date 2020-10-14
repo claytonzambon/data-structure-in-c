@@ -14,8 +14,11 @@ Pilha* cria_Pilha();
 void libera_Pilha(Pilha* pi);
 int tamanho_Pilha(Pilha* pi);
 int Pilha_cheia(Pilha* pi);
-int Pilha_vazia(Pilha* pi)
+int Pilha_vazia(Pilha* pi);
+int insere_Pilha(Pilha* pi, struct aluno al);
 
 //Funcoes do Arquivo mensagens.c
 void menu();
 void msg_pilha_vazia();
+void msg_pilha_cheia();
+void informar_dados(struct aluno *al);

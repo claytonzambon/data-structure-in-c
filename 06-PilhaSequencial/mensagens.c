@@ -29,6 +29,28 @@ void msg_pilha_vazia(){
     system("pause");
 }
 
+void msg_pilha_cheia(){
+    printf("\n\nPilha Cheia\n\n");
+    system("pause");
+}
+
+void informar_dados(struct aluno *al){  //Captura os dados digitados pelo usuario
+    printf("Digite a Matricula: ");
+    scanf("%d", &al->matricula);
+    printf("Digite o nome: ");
+    fseek(stdin,0,SEEK_END);
+    scanf("%[^\n]", al->nome);
+    printf("Digite a Nota 01: ");
+    scanf("%f", &al->n1);
+    printf("Digite a Nota 02: ");
+    scanf("%f", &al->n2);
+    printf("Digite a Nota 03: ");
+    scanf("%f", &al->n3);
+    printf("Digite a Nota 04: ");
+    scanf("%f", &al->n4);
+}
+
+
 void msg_elemento_inserido_com_sucesso(){
     printf("\n\nElemento inserido com sucesso\n\n");
     system("pause");
@@ -89,18 +111,4 @@ void exibe_consulta(struct aluno *al){
     printf("-------------------------------\n");
 }
 
-void informar_dados(struct aluno *al){  //Captura os dados digitados pelo usuario
-    printf("Digite a Matricula: ");
-    scanf("%d", &al->matricula);
-    printf("Digite o nome: ");
-    fseek(stdin,0,SEEK_END);
-    scanf("%[^\n]", al->nome);
-    printf("Digite a Nota 01: ");
-    scanf("%f", &al->n1);
-    printf("Digite a Nota 02: ");
-    scanf("%f", &al->n2);
-    printf("Digite a Nota 03: ");
-    scanf("%f", &al->n3);
-    printf("Digite a Nota 04: ");
-    scanf("%f", &al->n4);
-}
+

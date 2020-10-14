@@ -8,7 +8,7 @@ int main()
 {
     Pilha* pi; //Declarando um ponteiro do tipo Pilha
     pi = cria_Pilha();
-    //struct aluno dados_aluno;
+    struct aluno dados_aluno;
     int opcao;
     int i = 1;
     while(i == 1){
@@ -17,20 +17,14 @@ int main()
         scanf("%d", &opcao);
         switch(opcao){
             case 1:
-                /*
-                informar_dados(&dados_aluno);  //mensagens.c
-                dados_aluno.media = calcular_media(dados_aluno);
-                if(verificar_matricula(li, dados_aluno)){
-                    msg_matricula_existente();
-                } else if(verificar_notas(dados_aluno)) {
-                    msg_digite_notas_validas();
-                } else if(insere_lista_final(li, dados_aluno)) {
-                    msg_elemento_inserido_com_sucesso();
+                if(Pilha_cheia(pi)){
+                    msg_pilha_cheia();
+                    break;
                 } else {
-                    msg_falha_insercao();
+                    informar_dados(&dados_aluno);
+                    insere_Pilha(pi, dados_aluno);
+                    break;
                 }
-                break;
-                */
             case 2:
                 /*
 				if(lista_vazia(li))
