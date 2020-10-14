@@ -7,6 +7,7 @@
 int main()
 {
     Pilha* pi; //Declarando um ponteiro do tipo Pilha
+    pi = cria_Pilha();
     //struct aluno dados_aluno;
     int opcao;
     int i = 1;

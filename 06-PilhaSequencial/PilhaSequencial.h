@@ -9,5 +9,8 @@ struct aluno{
 };
 typedef struct pilha Pilha;
 
+//Funcoes do Arquivo PilhaSequencial.c
+Pilha* cria_Pilha();
+
 //Funcoes do Arquivo mensagens.c
 void menu();
