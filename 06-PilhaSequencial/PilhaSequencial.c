@@ -23,3 +23,27 @@ Pilha* cria_Pilha(){
 void libera_Pilha(Pilha* pi){
     free(pi);
 }
+
+//Funcao que retorna o tamanho da Pilha
+int tamanho_Pilha(Pilha* pi){
+    if(pi == NULL)
+        return -1;
+    else
+        return pi->qtd;
+}
+
+//Funcao que retorna se a Pilha esta cheia
+int Pilha_cheia(Pilha* pi){
+    if(pi == NULL)
+        return -1;
+    else
+        return (pi->qtd == MAX);
+}
+
+//Funcao que retorna se a Pilha esta vazia
+int Pilha_vazia(Pilha* pi){
+    if(pi == NULL)
+        return -1;
+    else
+        return (pi->qtd == 0);
+}

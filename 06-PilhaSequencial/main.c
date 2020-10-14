@@ -77,17 +77,14 @@ int main()
                 }
                 */
             case 5:
-                /*
-				if(lista_vazia(li))
-                {
-                    msg_lista_vazia(); //mensagens.c
+                if(tamanho_Pilha(pi) == -1){
+                    msg_pilha_vazia();
                     break;
                 } else {
-                    printf("O tamanho da Lista eh: %d\n", tamanho_lista(li));
+                    printf("\n\nO tamanho da Pilha eh: %d\n\n", tamanho_Pilha(pi));
                     system("pause");
                     break;
                 }
-                */
             case 6:
                 printf("\n\n\t\tAte Logo !!!\n\n\n\n\n");
                 i = 0;
