@@ -10,10 +10,16 @@ struct pilha{
     struct aluno dados[MAX];
 };
 
+//Funcao que cria a Pilha
 Pilha* cria_Pilha(){
     Pilha *pi;
     pi = (Pilha*)malloc(sizeof(struct pilha));
     if(pi != NULL)
        pi->qtd = 0;
     return pi;
+}
+
+//Funcao que libera a Pilha
+void libera_Pilha(Pilha* pi){
+    free(pi);
 }

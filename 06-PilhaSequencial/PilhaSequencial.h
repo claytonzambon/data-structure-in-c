@@ -11,6 +11,7 @@ typedef struct pilha Pilha;
 
 //Funcoes do Arquivo PilhaSequencial.c
 Pilha* cria_Pilha();
+void libera_Pilha(Pilha* pi);
 
 //Funcoes do Arquivo mensagens.c
 void menu();

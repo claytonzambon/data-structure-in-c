@@ -98,7 +98,7 @@ int main()
                 break;
         }
     }
-    //libera_lista(li);
+    libera_Pilha(pi);
     system("pause");
     printf("\n\n\n\n");
 }
