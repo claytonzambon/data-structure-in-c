@@ -44,17 +44,15 @@ int main()
                     break;
                 }
             case 4:
-                /*
-				if(lista_vazia(li))
-                {
-                    msg_lista_vazia();
+                if(Pilha_vazia(pi)){
+                    msg_pilha_vazia();
                     break;
                 } else {
-                    imprime_lista(li, &dados_aluno);
+                    imprime_Pilha(pi);
                     system("pause");
                     break;
                 }
-                */
+
             case 5:
                 if(tamanho_Pilha(pi) == -1){
                     msg_pilha_vazia();
