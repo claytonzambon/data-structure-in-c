@@ -60,7 +60,6 @@ void msg_removido_elemento(){
     system("pause");
 }
 
-
 void exibe_consulta(struct aluno *al){
     printf("Matricula: %d\n", al->matricula);
     printf("Nome: %s\n", al->nome);
@@ -70,6 +69,7 @@ void exibe_consulta(struct aluno *al){
            al->n3,
            al->n4);
     printf("-------------------------------\n");
+    system("pause");
 }
 
 

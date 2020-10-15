@@ -17,6 +17,7 @@ int Pilha_cheia(Pilha* pi);
 int Pilha_vazia(Pilha* pi);
 int insere_Pilha(Pilha* pi, struct aluno al);
 int remove_Pilha(Pilha* pi);
+int consulta_topo_Pilha(Pilha* pi, struct aluno *al);
 
 //Funcoes do Arquivo mensagens.c
 void menu();
@@ -25,3 +26,4 @@ void msg_pilha_cheia();
 void informar_dados(struct aluno *al);
 void msg_elemento_inserido_com_sucesso();
 void msg_removido_elemento();
+void exibe_consulta(struct aluno *al);

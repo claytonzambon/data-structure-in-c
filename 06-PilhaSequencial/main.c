@@ -36,24 +36,13 @@ int main()
                     break;
                 }
             case 3:
-                /*
-				if(lista_vazia(li))
-                {
-                    msg_lista_vazia();
-                    break;
-                }
-                printf("\nDigite a posicao a ser buscada: ");
-                scanf("%d", &posicao);
-                if (consulta_lista_pos(li, posicao, &dados_aluno)){
-                    exibe_consulta(&dados_aluno); //mensagens.c
-                    system("pause");
+                if(Pilha_vazia(pi)){
+                    msg_pilha_vazia();
                     break;
                 } else {
-                    msg_posicao_nao_encontrado(posicao);
-                    system("pause");
+                    consulta_topo_Pilha(pi, &dados_aluno);
                     break;
                 }
-                */
             case 4:
                 /*
 				if(lista_vazia(li))

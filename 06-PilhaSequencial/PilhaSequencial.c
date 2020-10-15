@@ -60,3 +60,10 @@ int remove_Pilha(Pilha* pi){
     pi->qtd--;
     return 1;
 }
+
+//Funcao que consulta o topo da Pilha
+int consulta_topo_Pilha(Pilha* pi, struct aluno *al){
+    *al = pi->dados[pi->qtd-1];
+    exibe_consulta(al);
+    return 1;
+}
