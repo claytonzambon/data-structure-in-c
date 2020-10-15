@@ -50,55 +50,16 @@ void informar_dados(struct aluno *al){  //Captura os dados digitados pelo usuari
     scanf("%f", &al->n4);
 }
 
-
 void msg_elemento_inserido_com_sucesso(){
     printf("\n\nElemento inserido com sucesso\n\n");
     system("pause");
 }
 
-void msg_falha_insercao(){
-    printf("\n\nFalha ao inserir o elemento\n\n");
+void msg_removido_elemento(){
+    printf("\nElemento removido com sucesso\n\n");
     system("pause");
 }
 
-void msg_removida_do_inicio(){
-    printf("\nElemento removido do INICIO da lista\n\n");
-    system("pause");
-}
-
-void msg_removida_do_final(){
-    printf("\n\nElemento removido do FINAL da lista\n\n");
-    system("pause");
-}
-
-void msg_falha_na_remocao(){
-    printf("\n\nErro ao Remover elemento\n\n");
-    system("pause");
-}
-
-void msg_matricula_nao_encontrado(int mat){
-    printf("\nElemento da matricula >> %d << nao encontrado\n\n", mat);
-    system("pause");
-}
-
-void msg_removida_a_matricula(int mat){
-    printf("\nRemovida a matricula >> %d << da lista\n", mat);
-    system("pause");
-}
-
-void msg_posicao_nao_encontrado(int pos){
-    printf("\nPosicao >> %d << nao encontrada\n\n", pos);
-}
-
-void msg_matricula_existente(){
-    printf("\n\nMatricula Existente\n\n");
-    system("pause");
-}
-
-void msg_digite_notas_validas(){
-    printf("\n\nDigite Notas entre 0 e 10\n\n");
-    system("pause");
-}
 
 void exibe_consulta(struct aluno *al){
     printf("Matricula: %d\n", al->matricula);

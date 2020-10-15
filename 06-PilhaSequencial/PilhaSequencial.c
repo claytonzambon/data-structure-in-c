@@ -54,3 +54,9 @@ int insere_Pilha(Pilha* pi, struct aluno al){
     pi->qtd++;
     return 1;
 }
+
+//Funcao que remove elemento da Pilha
+int remove_Pilha(Pilha* pi){
+    pi->qtd--;
+    return 1;
+}

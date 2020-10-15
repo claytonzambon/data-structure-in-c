@@ -23,22 +23,18 @@ int main()
                 } else {
                     informar_dados(&dados_aluno);
                     insere_Pilha(pi, dados_aluno);
+                    msg_elemento_inserido_com_sucesso();
                     break;
                 }
             case 2:
-                /*
-				if(lista_vazia(li))
-                {
-                    msg_lista_vazia();
-                    break;
-                } else if (remove_lista_final(li)) {
-                    msg_removida_do_final();
+                if(Pilha_vazia(pi)){
+                    msg_pilha_vazia();
                     break;
                 } else {
-                    msg_falha_na_remocao();
+                    remove_Pilha(pi);
+                    msg_removido_elemento();
                     break;
                 }
-                */
             case 3:
                 /*
 				if(lista_vazia(li))
