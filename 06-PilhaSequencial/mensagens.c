@@ -1,5 +1,5 @@
 //Arquivo mensagens.c
-//Contem todas as mensagens e menu da Pilha
+//Contem todas as mensagens e menu da   Pilha
 #include <stdio.h>
 #include <stdlib.h>
 #include "PilhaSequencial.h" //inclui os Protótipos
