@@ -30,3 +30,16 @@ void libera_Pilha(Pilha* pi){
         free(pi);
     }
 }
+
+//Retorna o tamanho da pilha
+int tamanho_Pilha(Pilha* pi){
+    if(pi == NULL)
+        return 0;
+    int cont = 0;
+    Elem* no = *pi;
+    while(no != NULL){
+        cont++;
+        no = no->prox;
+    }
+    return cont;
+}

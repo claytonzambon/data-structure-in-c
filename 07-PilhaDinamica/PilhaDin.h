@@ -10,6 +10,8 @@ typedef struct elemento* Pilha;
 //Funções do Arquivo PilhaDin.c
 Pilha* cria_Pilha();
 void libera_Pilha(Pilha* pi);
+int tamanho_Pilha(Pilha* pi);
 
 //Funcoes do Arquivo mensagens.c
 void menu();
+void msg_pilha_vazia();

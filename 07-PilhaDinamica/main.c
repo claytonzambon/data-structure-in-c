@@ -67,8 +67,7 @@ int main()
                 }
                 */
             case 5:
-                /*
-                if(tamanho_Pilha(pi) == -1){
+                if(tamanho_Pilha(pi) == 0){
                     msg_pilha_vazia();
                     break;
                 } else {
@@ -76,7 +75,6 @@ int main()
                     system("pause");
                     break;
                 }
-                */
             case 6:
                 printf("\n\n\t\tAté Logo !!!\n\n\n\n\n");
                 i = 0;

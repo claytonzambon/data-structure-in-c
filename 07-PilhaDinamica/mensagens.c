@@ -23,3 +23,8 @@ void menu(){
     printf("\n");
     printf("\nEscolha uma opção para continuar >>: ");
 }
+
+void msg_pilha_vazia(){
+    printf("\nPilha Vazia\n\n");
+    system("pause");
+}
