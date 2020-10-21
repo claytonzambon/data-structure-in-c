@@ -69,5 +69,4 @@ void exibe_consulta(struct aluno *al){
            al->n3,
            al->n4);
     printf("-------------------------------\n");
-    system("pause");
 }

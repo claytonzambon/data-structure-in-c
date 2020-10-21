@@ -43,6 +43,7 @@ int main()
                     msg_pilha_vazia();
                 } else {
                     consulta_topo_Pilha(pi, &dados_aluno);
+                    system("pause");
                 }
                 break;
             case 4:
