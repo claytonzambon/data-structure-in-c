@@ -39,15 +39,12 @@ int main()
                 }
                 break;
             case 3:
-                /*
                 if(Pilha_vazia(pi)){
                     msg_pilha_vazia();
-                    break;
                 } else {
                     consulta_topo_Pilha(pi, &dados_aluno);
-                    break;
                 }
-                */
+                break;
             case 4:
                 /*
                 if(Pilha_vazia(pi)){

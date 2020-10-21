@@ -59,3 +59,15 @@ void informar_dados(struct aluno *al){  //Captura os dados digitados pelo usuari
     printf("Digite a Nota 04: ");
     scanf("%f", &al->n4);
 }
+
+void exibe_consulta(struct aluno *al){
+    printf("Matrícula: %d\n", al->matricula);
+    printf("Nome: %s\n", al->nome);
+    printf("Notas: %.2f - %.2f  - %.2f - %.2f\n",
+           al->n1,
+           al->n2,
+           al->n3,
+           al->n4);
+    printf("-------------------------------\n");
+    system("pause");
+}

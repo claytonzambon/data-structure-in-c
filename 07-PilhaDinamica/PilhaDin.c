@@ -73,5 +73,12 @@ int remove_Pilha(Pilha* pi){
     return 1;
 }
 
+//Funcao que retorna o elemento do Topo da Pilha
+int consulta_topo_Pilha(Pilha* pi, struct aluno *al){
+    *al = (*pi)->dados;
+    exibe_consulta(al);
+    return 1;
+}
+
 
 
