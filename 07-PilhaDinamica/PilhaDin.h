@@ -15,6 +15,7 @@ int Pilha_vazia(Pilha* pi);
 int insere_Pilha(Pilha* pi, struct aluno al);
 int remove_Pilha(Pilha* pi);
 int consulta_topo_Pilha(Pilha* pi, struct aluno *al);
+void imprime_Pilha(Pilha* pi);
 
 //Funcoes do Arquivo mensagens.c
 void menu();

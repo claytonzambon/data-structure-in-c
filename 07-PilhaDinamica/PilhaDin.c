@@ -80,5 +80,20 @@ int consulta_topo_Pilha(Pilha* pi, struct aluno *al){
     return 1;
 }
 
+//Funcao que imprime a Pilha inteira
+void imprime_Pilha(Pilha* pi){
+    Elem* no = *pi;
+    while(no != NULL){
+        printf("Matricula: %d\n",no->dados.matricula);
+        printf("Nome: %s\n",no->dados.nome);
+        printf("Notas: %.2f %.2f %.2f %.2f\n",no->dados.n1,
+                                   no->dados.n2,
+                                   no->dados.n3,
+                                   no->dados.n4);
+        printf("-------------------------------\n");
+        no = no->prox;
+    }
+}
+
 
 

@@ -46,16 +46,13 @@ int main()
                 }
                 break;
             case 4:
-                /*
                 if(Pilha_vazia(pi)){
                     msg_pilha_vazia();
-                    break;
                 } else {
                     imprime_Pilha(pi);
                     system("pause");
-                    break;
                 }
-                */
+                break;
             case 5:
                 if(tamanho_Pilha(pi) == 0){
                     msg_pilha_vazia();
