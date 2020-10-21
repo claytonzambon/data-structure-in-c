@@ -64,3 +64,14 @@ int insere_Pilha(Pilha* pi, struct aluno al){
     *pi = no;
     return 1;
 }
+
+//Função para remover elementos da Pilha
+int remove_Pilha(Pilha* pi){
+    Elem *no = *pi;
+    *pi = no->prox;
+    free(no);
+    return 1;
+}
+
+
+

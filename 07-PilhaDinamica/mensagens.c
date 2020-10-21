@@ -39,6 +39,11 @@ void msg_elemento_inserido_com_sucesso(){
     system("pause");
 }
 
+void msg_removido_elemento(){
+    printf("\nElemento removido com sucesso\n\n");
+    system("pause");
+}
+
 void informar_dados(struct aluno *al){  //Captura os dados digitados pelo usuario
     printf("Digite a Matrícula: ");
     scanf("%d", &al->matricula);

@@ -31,16 +31,13 @@ int main()
                 }
                 break;
             case 2:
-                /*
                 if(Pilha_vazia(pi)){
                     msg_pilha_vazia();
-                    break;
                 } else {
                     remove_Pilha(pi);
                     msg_removido_elemento();
-                    break;
                 }
-                */
+                break;
             case 3:
                 /*
                 if(Pilha_vazia(pi)){
