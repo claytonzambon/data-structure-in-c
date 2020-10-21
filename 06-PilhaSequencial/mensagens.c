@@ -9,9 +9,9 @@ void menu(){
     printf("NOME: CLAYTON ZAMBON\n\n");
     printf("\n#########################################");
     printf("\n#               MENU                    #");
-    printf("\n#       Pilha Estatica Sequencial       #");
+    printf("\n#       Pilha Estática Sequencial       #");
     printf("\n#                                       #");
-    printf("\n# Digite a opcao desejada               #");
+    printf("\n# Digite a opção desejada               #");
     printf("\n#                                       #");
     printf("\n# 1 - Inserir Elemento                  #");
     printf("\n# 2 - Remover Elemento                  #");
@@ -21,7 +21,7 @@ void menu(){
     printf("\n# 6 - Sair                              #");
     printf("\n#########################################");
     printf("\n");
-    printf("\nEscolha uma opcao para continuar >>: ");
+    printf("\nEscolha uma opção para continuar >>: ");
 }
 
 void msg_pilha_vazia(){
@@ -35,7 +35,7 @@ void msg_pilha_cheia(){
 }
 
 void informar_dados(struct aluno *al){  //Captura os dados digitados pelo usuario
-    printf("Digite a Matricula: ");
+    printf("Digite a Matrícula: ");
     scanf("%d", &al->matricula);
     printf("Digite o nome: ");
     fseek(stdin,0,SEEK_END);
@@ -61,7 +61,7 @@ void msg_removido_elemento(){
 }
 
 void exibe_consulta(struct aluno *al){
-    printf("Matricula: %d\n", al->matricula);
+    printf("Matrícula: %d\n", al->matricula);
     printf("Nome: %s\n", al->nome);
     printf("Notas: %.2f - %.2f  - %.2f - %.2f\n",
            al->n1,

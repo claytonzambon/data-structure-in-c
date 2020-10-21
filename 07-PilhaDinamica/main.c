@@ -2,12 +2,15 @@
 //Contem todas as chamadas das funcoes
 #include <stdio.h>
 #include <stdlib.h>
-#include "PilhaSequencial.h"    //inclui os Protótipos
+//#include <windows.h>
 #include <locale.h>             //Biblioteca que permite utilizar acentuações
+#include "PilhaDin.h"    //inclui os Protótipos
 
 int main()
 {
-    setlocale(LC_ALL,""); //Função para utilizar acentuação
+    //setlocale(LC_ALL,""); //Função para utilizar acentuação
+    //SetConsoleOutputCP(1252);
+	//SetConsoleCP ( 1252 );
 
     Pilha* pi; //Declarando um ponteiro do tipo Pilha
     pi = cria_Pilha();
@@ -20,6 +23,7 @@ int main()
         scanf("%d", &opcao);
         switch(opcao){
             case 1:
+                /*
                 if(Pilha_cheia(pi)){
                     msg_pilha_cheia();
                     break;
@@ -29,7 +33,9 @@ int main()
                     msg_elemento_inserido_com_sucesso();
                     break;
                 }
+                */
             case 2:
+                /*
                 if(Pilha_vazia(pi)){
                     msg_pilha_vazia();
                     break;
@@ -38,7 +44,9 @@ int main()
                     msg_removido_elemento();
                     break;
                 }
+                */
             case 3:
+                /*
                 if(Pilha_vazia(pi)){
                     msg_pilha_vazia();
                     break;
@@ -46,7 +54,9 @@ int main()
                     consulta_topo_Pilha(pi, &dados_aluno);
                     break;
                 }
+                */
             case 4:
+                /*
                 if(Pilha_vazia(pi)){
                     msg_pilha_vazia();
                     break;
@@ -55,8 +65,9 @@ int main()
                     system("pause");
                     break;
                 }
-
+                */
             case 5:
+                /*
                 if(tamanho_Pilha(pi) == -1){
                     msg_pilha_vazia();
                     break;
@@ -65,6 +76,7 @@ int main()
                     system("pause");
                     break;
                 }
+                */
             case 6:
                 printf("\n\n\t\tAté Logo !!!\n\n\n\n\n");
                 i = 0;
