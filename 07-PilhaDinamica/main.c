@@ -14,7 +14,7 @@ int main()
 
     Pilha* pi; //Declarando um ponteiro do tipo Pilha
     pi = cria_Pilha();
-    struct aluno dados_aluno;
+    struct aluno dados_aluno; //Struct definida no arquivo PilhaDin.h
     int opcao;
     int i = 1;
     while(i == 1){
@@ -23,17 +23,13 @@ int main()
         scanf("%d", &opcao);
         switch(opcao){
             case 1:
-                /*
-                if(Pilha_cheia(pi)){
-                    msg_pilha_cheia();
-                    break;
-                } else {
-                    informar_dados(&dados_aluno);
-                    insere_Pilha(pi, dados_aluno);
+                informar_dados(&dados_aluno);
+                if(insere_Pilha(pi, dados_aluno)){
                     msg_elemento_inserido_com_sucesso();
-                    break;
+                } else {
+                    msg_insercao_com_falha();
                 }
-                */
+                break;
             case 2:
                 /*
                 if(Pilha_vazia(pi)){

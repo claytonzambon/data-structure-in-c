@@ -43,3 +43,24 @@ int tamanho_Pilha(Pilha* pi){
     }
     return cont;
 }
+
+//Retorna se Pilha Vazia
+int Pilha_vazia(Pilha* pi){
+    if(pi == NULL || *pi == NULL)
+        return 1;
+
+    return 0;
+}
+
+//Função para inserir elementos na Pilha
+int insere_Pilha(Pilha* pi, struct aluno al){
+    Elem* no;
+    no = (Elem*)malloc(sizeof(Elem));
+    if(no == NULL)
+        return 0;
+
+    no->dados = al;
+    no->prox = (*pi);
+    *pi = no;
+    return 1;
+}

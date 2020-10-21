@@ -28,3 +28,29 @@ void msg_pilha_vazia(){
     printf("\nPilha Vazia\n\n");
     system("pause");
 }
+
+void msg_insercao_com_falha(){
+    printf("\nFALHA na insercao do Elemento\n");
+    system("pause");
+}
+
+void msg_elemento_inserido_com_sucesso(){
+    printf("\n\nElemento inserido com sucesso\n\n");
+    system("pause");
+}
+
+void informar_dados(struct aluno *al){  //Captura os dados digitados pelo usuario
+    printf("Digite a Matrícula: ");
+    scanf("%d", &al->matricula);
+    printf("Digite o nome: ");
+    fseek(stdin,0,SEEK_END);
+    scanf("%[^\n]", al->nome);
+    printf("Digite a Nota 01: ");
+    scanf("%f", &al->n1);
+    printf("Digite a Nota 02: ");
+    scanf("%f", &al->n2);
+    printf("Digite a Nota 03: ");
+    scanf("%f", &al->n3);
+    printf("Digite a Nota 04: ");
+    scanf("%f", &al->n4);
+}
