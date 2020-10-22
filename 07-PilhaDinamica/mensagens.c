@@ -11,7 +11,7 @@ void menu(){
     printf("\n#               MENU                    #");
     printf("\n#           Pilha Dinâmica              #");
     printf("\n#                                       #");
-    printf("\n# Digite a opção desejada               #");
+    printf("\n#  Digite a opção desejada              #");
     printf("\n#                                       #");
     printf("\n# 1 - Inserir Elemento                  #");
     printf("\n# 2 - Remover Elemento                  #");

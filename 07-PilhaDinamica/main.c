@@ -1,16 +1,13 @@
-//Arquivo main.c
+ï»¿//Arquivo main.c
 //Contem todas as chamadas das funcoes
 #include <stdio.h>
 #include <stdlib.h>
-//#include <windows.h>
-#include <locale.h>             //Biblioteca que permite utilizar acentuações
-#include "PilhaDin.h"    //inclui os Protótipos
+#include <locale.h>             //Biblioteca que permite utilizar acentuaÃ§Ãµes
+#include "PilhaDin.h"    //inclui os ProtÃ³tipos
 
 int main()
 {
-    //setlocale(LC_ALL,""); //Função para utilizar acentuação
-    //SetConsoleOutputCP(1252);
-	//SetConsoleCP ( 1252 );
+    setlocale(LC_ALL, "");//FunÃ§Ã£o para utilizar acentuaÃ§Ã£o
 
     Pilha* pi; //Declarando um ponteiro do tipo Pilha
     pi = cria_Pilha();
@@ -19,6 +16,7 @@ int main()
     int i = 1;
     while(i == 1){
         system("cls");
+        //printf(setlocale(LC_ALL, "Portuguese_Brazil.1252"));
         menu();
         scanf("%d", &opcao);
         switch(opcao){
@@ -59,16 +57,16 @@ int main()
                     msg_pilha_vazia();
                     break;
                 } else {
-                    printf("\n\nO tamanho da Pilha é: %d\n\n", tamanho_Pilha(pi));
+                    printf("\n\nO tamanho da Pilha Ã©: %d\n\n", tamanho_Pilha(pi));
                     system("pause");
                     break;
                 }
             case 6:
-                printf("\n\n\t\tAté Logo !!!\n\n\n\n\n");
+                printf("\n\n\t\tAtÃ© Logo !!!\n\n\n\n\n");
                 i = 0;
                 break;
             default:
-                printf("\n\nOpcao Inválida\n\n");
+                printf("\n\nOpcao InvÃ¡lida\n\n");
                 system("pause");
                 break;
         }
