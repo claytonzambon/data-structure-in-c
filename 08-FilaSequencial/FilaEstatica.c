@@ -18,3 +18,8 @@ Fila* cria_Fila(){
     }
     return fi;
 }
+
+void libera_Fila(Fila* fi){
+    free(fi);
+}
+

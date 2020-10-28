@@ -9,3 +9,4 @@ typedef struct fila Fila;
 
 //Funcoes do arquivo FilaEstatica.c
 Fila* cria_Fila();
+void libera_Fila(Fila* fi);
