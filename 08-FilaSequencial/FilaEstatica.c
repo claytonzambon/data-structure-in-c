@@ -40,3 +40,9 @@ int Fila_vazia(Fila* fi){
         return -1;
     return (fi->inicio == fi->final);
 }
+
+int insere_Fila(Fila* fi, struct aluno al){
+    fi->final = (fi->final+1)%MAX;
+    fi->dados[fi->final] = al;
+    return 1;
+}

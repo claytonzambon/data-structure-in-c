@@ -15,8 +15,18 @@ int main()
         menu();
         scanf("%d", &opcao);
         switch(opcao){
+            case 1:
+                if(Fila_cheia(fi)){
+                    msg_fila_cheia();
+                    break;
+                } else {
+                    informar_dados(&dados_aluno);
+                    insere_Fila(fi, dados_aluno);
+                    msg_elemento_inserido_com_sucesso();
+                    break;
+                }
             case 5:
-                if(!(Fila_vazia(fi))){
+                if(Fila_vazia(fi)){
                     msg_fila_vazia();
                     break;
                 } else {
