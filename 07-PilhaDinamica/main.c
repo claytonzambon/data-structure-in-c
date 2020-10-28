@@ -2,13 +2,10 @@
 //Contem todas as chamadas das funcoes
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>             //Biblioteca que permite utilizar acentuações
 #include "PilhaDin.h"    //inclui os Protótipos
 
 int main()
 {
-    setlocale(LC_ALL, "");//Função para utilizar acentuação
-
     Pilha* pi; //Declarando um ponteiro do tipo Pilha
     pi = cria_Pilha();
     struct aluno dados_aluno; //Struct definida no arquivo PilhaDin.h
@@ -16,7 +13,6 @@ int main()
     int i = 1;
     while(i == 1){
         system("cls");
-        //printf(setlocale(LC_ALL, "Portuguese_Brazil.1252"));
         menu();
         scanf("%d", &opcao);
         switch(opcao){
@@ -57,16 +53,16 @@ int main()
                     msg_pilha_vazia();
                     break;
                 } else {
-                    printf("\n\nO tamanho da Pilha é: %d\n\n", tamanho_Pilha(pi));
+                    printf("\n\nO tamanho da Pilha eh: %d\n\n", tamanho_Pilha(pi));
                     system("pause");
                     break;
                 }
             case 6:
-                printf("\n\n\t\tAté Logo !!!\n\n\n\n\n");
+                printf("\n\n\t\tAte Logo !!!\n\n\n\n\n");
                 i = 0;
                 break;
             default:
-                printf("\n\nOpcao Inválida\n\n");
+                printf("\n\nOpcao Invalida\n\n");
                 system("pause");
                 break;
         }
