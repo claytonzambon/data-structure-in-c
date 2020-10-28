@@ -23,3 +23,18 @@ void libera_Fila(Fila* fi){
     free(fi);
 }
 
+int tamanho_Fila(Fila* fi){
+    if(fi == NULL)
+        return -1;
+    int qtd = abs(fi->final - fi->inicio);
+    return qtd;
+}
+
+int Fila_cheia(Fila* fi){
+    if(fi == NULL)
+        return -1;
+    if (fi->inicio == (fi->final+1)%MAX)
+        return 1;
+    else
+        return 0;
+}
