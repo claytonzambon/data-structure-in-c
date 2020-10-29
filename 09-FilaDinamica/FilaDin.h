@@ -6,3 +6,6 @@ struct aluno{
 };
 
 typedef struct fila Fila;
+
+//Funcoes do arquivo FilaDin.c
+Fila* cria_Fila();

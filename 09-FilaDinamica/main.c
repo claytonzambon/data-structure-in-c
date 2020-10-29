@@ -5,5 +5,6 @@
 int main()
 {
     Fila *fi;
+    fi = cria_Fila();
     return 0;
 }

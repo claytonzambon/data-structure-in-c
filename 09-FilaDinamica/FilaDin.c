@@ -15,3 +15,13 @@ struct fila{
     struct elemento *final;
     int qtd;
 };
+
+Fila* cria_Fila(){
+    Fila* fi = (Fila*) malloc(sizeof(Fila));
+    if(fi != NULL){
+        fi->final = NULL;
+        fi->inicio = NULL;
+        fi->qtd = 0;
+    }
+    return fi;
+}
