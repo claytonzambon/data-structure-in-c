@@ -43,3 +43,10 @@ int tamanho_Fila(Fila* fi){
         return 0;
     return fi->qtd;
 }
+
+int Fila_vazia(Fila* fi){
+    if(fi == NULL || fi->inicio == NULL)
+        return 1;
+
+    return 0;
+}

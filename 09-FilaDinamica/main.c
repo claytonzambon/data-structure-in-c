@@ -14,7 +14,7 @@ int main()
         scanf("%d", &opcao);
         switch(opcao){
             case 5:
-                if(tamanho_Fila(fi) == -1){
+                if(Fila_vazia(fi)){
                     msg_fila_vazia();
                     break;
                 } else {
