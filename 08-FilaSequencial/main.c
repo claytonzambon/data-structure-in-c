@@ -11,7 +11,6 @@ int main()
 
     int i = 1;
     while(i == 1){
-        system("cls");
         menu();
         scanf("%d", &opcao);
         switch(opcao){
@@ -23,6 +22,15 @@ int main()
                     informar_dados(&dados_aluno);
                     insere_Fila(fi, dados_aluno);
                     msg_elemento_inserido_com_sucesso();
+                    break;
+                }
+            case 2:
+                if(Fila_vazia(fi)){
+                    msg_fila_vazia();
+                    break;
+                } else {
+                    remove_Fila(fi);
+                    msg_removido_elemento();
                     break;
                 }
             case 5:

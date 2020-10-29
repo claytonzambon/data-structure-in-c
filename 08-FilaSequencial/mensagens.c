@@ -6,6 +6,7 @@
 
 //Implementacao do MENU INICIAL
 void menu(){
+    system("cls");
     printf("NOME: CLAYTON ZAMBON\n\n");
     printf("\n#########################################");
     printf("\n#               MENU                    #");
@@ -52,5 +53,10 @@ void informar_dados(struct aluno *al){  //Captura os dados digitados pelo usuari
 
 void msg_elemento_inserido_com_sucesso(){
     printf("\n\nElemento inserido com sucesso\n\n");
+    system("pause");
+}
+
+void msg_removido_elemento(){
+    printf("\nElemento removido com sucesso\n\n");
     system("pause");
 }
