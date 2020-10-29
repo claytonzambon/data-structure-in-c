@@ -93,3 +93,11 @@ int consulta_Fila(Fila* fi, struct aluno *al){
     exibe_consulta(al);
     return 1;
 }
+
+void imprime_Fila(Fila* fi){
+    Elem* no = fi->inicio;
+    while(no != NULL){
+        exibe_consulta(no);
+        no = no->prox;
+    }
+}
