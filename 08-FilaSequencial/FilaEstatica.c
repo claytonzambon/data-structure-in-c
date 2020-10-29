@@ -47,13 +47,32 @@ int Fila_vazia(Fila* fi){
 }
 
 int insere_Fila(Fila* fi, struct aluno al){
-    fi->final = (fi->final+1)%MAX;
     fi->dados[fi->final] = al;
+    fi->final = (fi->final+1);
     fi->qtd++;
     return 1;
 }
 
 int remove_Fila(Fila* fi){
+    fi->inicio = (fi->inicio+1);
     fi->qtd--;
     return 1;
 }
+
+int consulta_Fila(Fila* fi, struct aluno *al){
+    *al = fi->dados[fi->inicio];
+    exibe_consulta(al);
+    return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
