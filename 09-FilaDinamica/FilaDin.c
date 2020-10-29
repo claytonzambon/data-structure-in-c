@@ -37,3 +37,9 @@ void libera_Fila(Fila* fi){
         free(fi);
     }
 }
+
+int tamanho_Fila(Fila* fi){
+    if(fi == NULL)
+        return 0;
+    return fi->qtd;
+}
