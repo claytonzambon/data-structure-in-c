@@ -25,3 +25,15 @@ Fila* cria_Fila(){
     }
     return fi;
 }
+
+void libera_Fila(Fila* fi){
+    if(fi != NULL){
+        Elem* no;
+        while(fi->inicio != NULL){
+            no = fi->inicio;
+            fi->inicio = fi->inicio->prox;
+            free(no);
+        }
+        free(fi);
+    }
+}
