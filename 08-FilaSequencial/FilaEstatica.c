@@ -65,6 +65,21 @@ int consulta_Fila(Fila* fi, struct aluno *al){
     return 1;
 }
 
+//Funcao que imprime a Fila inteira
+void imprime_Fila(Fila* fi){
+    int n, i = fi->inicio;
+    for(n=0; n < fi->qtd; n++){
+        printf("Matricula: %d\n",fi->dados[i].matricula);
+        printf("Nome: %s\n",fi->dados[i].nome);
+        printf("Notas: %.2f %.2f %.2f %.2f\n",fi->dados[i].n1,
+                                   fi->dados[i].n2,
+                                   fi->dados[i].n3,
+                                   fi->dados[i].n4);
+        printf("-------------------------------\n");
+        i++;
+    }
+}
+
 
 
 

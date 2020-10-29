@@ -41,6 +41,15 @@ int main()
                     consulta_Fila(fi, &dados_aluno);
                     break;
                 }
+            case 4:
+                if(Fila_vazia(fi)){
+                    msg_fila_vazia();
+                    break;
+                } else {
+                    imprime_Fila(fi);
+                    system("pause");
+                    break;
+                }
             case 5:
                 if(Fila_vazia(fi)){
                     msg_fila_vazia();
