@@ -70,3 +70,20 @@ int insere_Fila(Fila* fi, struct aluno al){
 
     return 1;
 }
+
+int remove_Fila(Fila* fi){
+    if(fi == NULL)
+        return 0;
+
+    if(fi->inicio == NULL)//fila vazia
+        return 0;
+
+    Elem *no = fi->inicio;
+    fi->inicio = fi->inicio->prox;
+    if(fi->inicio == NULL)//fila ficou vazia
+        fi->final = NULL;
+    free(no);
+    fi->qtd--;
+
+    return 1;
+}

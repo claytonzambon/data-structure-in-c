@@ -21,6 +21,14 @@ int main()
                     msg_insercao_com_falha();
                 }
                 break;
+            case 2:
+                if(Fila_vazia(fi)){
+                    msg_fila_vazia();
+                } else {
+                    remove_Fila(fi);
+                    msg_removido_elemento();
+                }
+                break;
             case 5:
                 if(Fila_vazia(fi)){
                     msg_fila_vazia();

@@ -55,3 +55,8 @@ void msg_insercao_com_falha(){
     printf("\nFALHA na insercao do Elemento\n");
     system("pause");
 }
+
+void msg_removido_elemento(){
+    printf("\nElemento removido com sucesso\n\n");
+    system("pause");
+}
