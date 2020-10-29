@@ -87,3 +87,9 @@ int remove_Fila(Fila* fi){
 
     return 1;
 }
+
+int consulta_Fila(Fila* fi, struct aluno *al){
+    *al = fi->inicio->dados;
+    exibe_consulta(al);
+    return 1;
+}

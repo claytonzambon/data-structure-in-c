@@ -29,6 +29,13 @@ int main()
                     msg_removido_elemento();
                 }
                 break;
+            case 3:
+                if(Fila_vazia(fi)){
+                    msg_fila_vazia();
+                } else {
+                    consulta_Fila(fi, &dados_aluno);
+                }
+                break;
             case 5:
                 if(Fila_vazia(fi)){
                     msg_fila_vazia();

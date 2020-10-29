@@ -14,6 +14,7 @@ int tamanho_Fila(Fila* fi);
 int Fila_vazia(Fila* fi);
 int insere_Fila(Fila* fi, struct aluno al);
 int remove_Fila(Fila* fi);
+int consulta_Fila(Fila* fi, struct aluno *al);
 
 //Funcoes do arquivo mensagens.c
 void menu();
@@ -22,3 +23,4 @@ void informar_dados(struct aluno *al);
 void msg_elemento_inserido_com_sucesso();
 void msg_insercao_com_falha();
 void msg_removido_elemento();
+void exibe_consulta(struct aluno *al);
