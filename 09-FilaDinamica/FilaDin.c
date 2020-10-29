@@ -50,3 +50,23 @@ int Fila_vazia(Fila* fi){
 
     return 0;
 }
+
+int insere_Fila(Fila* fi, struct aluno al){
+    if(fi == NULL)
+        return 0;
+
+    Elem *no = (Elem*) malloc(sizeof(Elem));
+    if(no == NULL)
+         return 0;
+
+    no->dados = al;
+    no->prox = NULL;
+    if(fi->final == NULL)//fila vazia
+        fi->inicio = no;
+    else
+        fi->final->prox = no;
+    fi->final = no;
+    fi->qtd++;
+
+    return 1;
+}

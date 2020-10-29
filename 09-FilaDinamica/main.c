@@ -13,15 +13,22 @@ int main()
         menu();
         scanf("%d", &opcao);
         switch(opcao){
+            case 1:
+                informar_dados(&dados_aluno);
+                if(insere_Fila(fi, dados_aluno)){
+                    msg_elemento_inserido_com_sucesso();
+                } else {
+                    msg_insercao_com_falha();
+                }
+                break;
             case 5:
                 if(Fila_vazia(fi)){
                     msg_fila_vazia();
-                    break;
                 } else {
                     printf("\n\nO tamanho da Fila eh: %d\n\n", tamanho_Fila(fi));
                     system("pause");
-                    break;
                 }
+                break;
             case 6:
                 printf("\n\n\t\tAte Logo !!!\n\n\n\n\n");
                 i = 0;
