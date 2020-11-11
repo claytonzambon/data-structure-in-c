@@ -62,7 +62,7 @@ void msg_removido_elemento(){
 }
 
 void exibe_consulta(struct aluno *al){
-    printf("Matrícula: %d\n", al->matricula);
+    printf("Matricula: %d\n", al->matricula);
     printf("Nome: %s\n", al->nome);
     printf("Notas: %.2f - %.2f  - %.2f - %.2f\n",
            al->n1,
